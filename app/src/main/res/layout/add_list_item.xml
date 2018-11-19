@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rela_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" >
+
+        <TextView
+            android:id="@+id/edit_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="#00000000"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/text_black"
+            android:textColorHint="@color/text_qiangray"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rela_context"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" >
+
+        <TextView
+            android:id="@+id/edit_context"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:background="#00000000"
+            android:gravity="top"
+            android:padding="10dp"
+            android:text=""
+            android:textColor="@color/text_black"
+            android:textColorHint="@color/text_qiangray"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/img_quanping"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:padding="10dp"
+            android:src="@drawable/img_btn_quanping"
+            android:text="全屏编辑"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rela_pic"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txt_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="封面图"
+                android:textColor="@color/text_qiangray"
+                android:textSize="15dp" />
+
+            <ImageView
+                android:id="@+id/edit_pic"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:gravity="center"
+                android:paddingBottom="3dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_take_pictrue"
+                android:text="照相" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_shangchuantupian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:paddingBottom="3dp"
+            android:paddingLeft="1dp"
+            android:paddingRight="10dp"
+            android:text="上传您的图片"
+            android:textColor="@color/text_qiangray"
+            android:textSize="15dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rela_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp" >
+
+        <ImageView
+            android:id="@+id/img_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/img_switch_yes" />
+
+        <TextView
+            android:id="@+id/txt_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:paddingBottom="3dp"
+            android:paddingLeft="1dp"
+            android:paddingRight="10dp"
+            android:text="是否推荐"
+            android:textColor="@color/text_qiangray"
+            android:textSize="15dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/txt_tuwen"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp" >
+
+        <ImageView
+            android:id="@+id/img_tuwen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+			
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:gravity="center_vertical"
+            android:hint="图文混编"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="@color/text_black"
+            android:textColorHint="@color/text_qiangray"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+</LinearLayout>

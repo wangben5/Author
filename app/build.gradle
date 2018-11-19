@@ -1,0 +1,101 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion "27.0.3"
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    defaultConfig {
+        applicationId "com.shadt.caibian_news"
+        minSdkVersion 19
+        targetSdkVersion 21
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        useLibrary 'org.apache.http.legacy'
+        ndk{
+            abiFilters "armeabi","armeabi-v7a"
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+
+
+
+
+    lintOptions {
+        disable "ResourceType"
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+        preDexLibraries = false
+    }
+    buildTypes {
+        release {
+            lintOptions {
+                checkReleaseBuilds false
+                abortOnError false
+            }
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            jni.srcDirs = []
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+dependencies {
+    compile 'com.android.support:multidex:1.0.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.android.support:support-v4:27.1.1'
+    implementation files('libs/jsoup-1.7.1.jar')
+    implementation files('libs/AMap_Location_V4.1.0_20180619.jar')
+    implementation files('libs/xUtils-2.6.14.jar')
+    implementation 'com.github.promeg:tinypinyin:1.0.0'
+    // ~80KB
+    implementation files('libs/AMap_Channel_Location_V1.4.0_20160708.jar')
+    implementation files('libs/AMap_Search_V3.4.0_20160811.jar')
+    implementation files('libs/Android_Map3D_SDK_V6.2.0_20180427.jar')
+    configurations.all {
+        resolutionStrategy.force 'com.android.support:support-annotations:26.1.0'
+    }
+    implementation 'de.greenrobot:greendao:2.1.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.5.1'
+    compile 'com.github.nukc.stateview:library:1.2.1'
+    implementation 'cn.jzvd:jiaozivideoplayer:6.2.12'
+    implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
+    //eventbus
+    compile 'com.github.clans:fab:1.6.1'
+    compile 'com.nineoldandroids:library:2.4.0'
+    implementation project(':cropper')
+    implementation project(':IMKit')
+    implementation project(':picture_library')
+    //    implementation project(':silicompressor')
+    implementation project(':danbin')
+    implementation project(':cameresdk')
+    compile 'com.huawei.android.hms:push:2.6.1.301'
+    implementation project(':CallKit')
+    compile 'org.greenrobot:eventbus:3.0.0'
+    //    implementation project(':mylibrary')
+    implementation files('libs/Msc.jar')
+    implementation files('libs/Sunflower.jar')
+}

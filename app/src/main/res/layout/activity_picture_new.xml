@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/top_back" />
+
+    <ScrollView
+        android:id="@+id/msc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:overScrollMode="never" />
+
+
+            <include
+                layout="@layout/layout_number"
+                android:visibility="gone" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="68dp"
+                    android:layout_margin="10dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/text_leixin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:text="文件类型:"
+                            android:textColor="@color/text_main"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/text_size"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:text="名称大小:"
+                            android:textColor="@color/text_main"
+                            android:textSize="15sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+
+                    android:layout_margin="10dp">
+
+                    <EditText
+                        android:id="@+id/ed_miaosu"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:background="@color/white"
+                        android:gravity="top|left"
+                        android:hint="文件描述"
+                        android:imeOptions="actionUnspecified"
+                        android:padding="5dp"
+                        android:textColor="@color/text_main"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/img_voiceline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/voice_empty" />
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/ed_key"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="10dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:hint="关键字"
+                    android:imeOptions="actionUnspecified"
+                    android:maxLines="1"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textColor="@color/text_main"
+                    android:textSize="15sp" />
+
+                <RelativeLayout
+                    android:id="@+id/rela_choose"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/text1"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="文件夹选择:"
+                        android:textColor="@color/text_main"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/text_mywenjian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toLeftOf="@+id/img_wenjian"
+                        android:layout_toRightOf="@+id/text1"
+                        android:lines="1"
+                        android:text=" "
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/img_wenjian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/icon_set_enter" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rela_task"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/text0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="任务绑定:"
+                        android:textColor="@color/text_main"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/text_task"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toLeftOf="@+id/img_task"
+                        android:layout_toRightOf="@+id/text0"
+                        android:lines="1"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/img_task"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/icon_set_enter" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rela_upload"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:background="@color/blue"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="立即上传"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,930 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">采编一线</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="prompt_email">请输入用户名</string>
+    <string name="prompt_password">请输入密码</string>
+    <string name="action_login">登录</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">用户名错误</string>
+    <string name="error_invalid_password">密码格式不正确</string>
+    <string name="error_null_password">密码不能为空</string>
+    <string name="error_field_required">用户名不能为空</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."</string>
+    <string name="edit_title">请编辑标题</string>
+    <string name="edit_content">请编辑内容</string>
+    <string name="load">loading...</string>
+    <string name="erro_net">网络错误！</string>
+    <string name="no_chinese">._0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLIMNOPQRSTUVWXYZ</string>
+    <string name="scan_tips">将二维码图片对准扫描框即可自动扫描</string>
+	
+    
+        <!-- 自定义组件 -->
+    <string name="pull_to_refresh">下拉可以刷新</string>
+    <string name="release_to_refresh">松开可以刷新</string>
+    <string name="lastUpdateTime">最近更新：%s</string>
+    <string name="load_full">已加载全部</string>
+    <string name="no_data">暂无数据</string>
+    <string name="more">加载中</string>
+    <!-- 消除警告，可忽略 -->
+    <string name="d">图片描述</string>
+    
+    
+    
+    
+     <string-array name="activity_titles">
+        <item>Basic usage playground</item>
+        <item>Heteroheight</item>
+        <item>Warp</item>
+        <item>Background handle</item>
+        <item>Sections</item>
+        <item>CursorAdapter</item>
+        <item>Multiple-choice mode</item>
+        <item>Single-choice mode</item>
+    </string-array>
+    <string-array name="activity_descs">
+        <item>
+            Use the menu to adjust settings related to item
+            removal and drag initiation. These options are
+            provided by the DragSortController class.
+        </item>
+        <item>
+            Demonstrates (tests) drag-sorting when list items
+            have varying heights.
+        </item>
+        <item>
+            Demonstrates drag-scroll customization; long lists
+            need fast scrolling.
+        </item>
+        <item>
+            Simple DragSortController customization. In this example,
+            the drag handle is a background drawable; therefore, the
+            drag handle hit detection mechanism needs modification. 
+            Also, the floating View is given some flavor.
+        </item>
+        <item>
+            Demonstrates floating View control from a custom
+            FloatViewManager. Restrict item drags to list sections.
+        </item>
+        <item>
+            Demonstrates usage of the DragSortCursorAdapter class,
+            which abstracts drag-sorts with a remapping of Cursor
+            positions to ListView positions.
+        </item>
+        <item>
+            Uses Checkable list items in multiple-choice mode.
+        </item>
+        <item>
+            Uses Checkable list items to allow for selectable radio
+            buttons in single-choice mode.
+        </item>
+    </string-array>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="select_remove_mode">Remove modes</string>
+    <string name="select_drag_init_mode">Start-drag modes</string>
+    <string name="select_enables">Enable/Disable</string>
+    <string name="add_header">Add header</string>
+    <string name="add_footer">Add footer</string>
+    <string-array name="remove_mode_labels">
+      <item>Click remove</item>
+      <item>Fling remove</item>
+    </string-array>
+    <string-array name="drag_init_mode_labels">
+      <item>On down</item>
+      <item>On drag</item>
+      <item>On long press</item>
+    </string-array>
+    <string-array name="enables_labels">
+      <item>Enable drag</item>
+      <item>Enable sort</item>
+      <item>Enable remove</item>
+    </string-array>
+    <string-array name="jazz_artist_names">
+      <item>Brad Mehldau</item>
+      <item>Joshua Redman</item>
+      <item>Chick Corea</item>
+      <item>Kurt Rosenwinkel</item>
+      <item>Miles Davis</item>
+      <item>Wayne Shorter</item>
+      <item>Michael Brecker</item>
+      <item>Herbie Hancock</item>
+      <item>Joe Zawinul</item>
+      <item>Brian Blade</item>
+      <item>Jeff Ballard</item>
+      <item>Larry Grenadier</item>
+      <item>Keith Jarrett</item>
+      <item>McCoy Tyner</item>
+      <item>Stephon Harris</item>
+      <item>Mark Turner</item>
+    </string-array>
+    <string-array name="jazz_artist_albums">
+      <item>Largo, Art of the Trio 1-4, Highway Rider, Songs</item>
+      <item>Elastic, Momentum, Mood Swing, Back East</item>
+      <item>Light as a Feather, Akoustic Band, My Spanish Heart</item>
+      <item>Deep Song, Heartcore, Our Secret World, Reflections, The Remedy: Live at the Village Vanguard, The Enemies of Energy, The Next Step</item>
+    </string-array>
+
+    <string-array name="countries">
+      <item>Afghanistan</item>
+      <item>Albania</item>
+      <item>Algeria</item>
+      <item>American Samoa</item>
+      <item>Andorra</item>
+      <item>Angola</item>
+      <item>Anguilla</item>
+      <item>Antigua and Barbuda</item>
+      <item>Argentina</item>
+      <item>Armenia</item>
+      <item>Australia</item>
+      <item>Austria</item>
+      <item>Azerbajan</item>
+      <item>Bahamas</item>
+      <item>Bahrain</item>
+      <item>Bangladesh</item>
+      <item>Barbados</item>
+      <item>Belarus</item>
+      <item>Belgium</item>
+      <item>Belize</item>
+      <item>Benin</item>
+      <item>Bermuda</item>
+      <item>Bhutan</item>
+      <item>Bolivia</item>
+      <item>Bosnia and Herzegovina</item>
+      <item>Botswana</item>
+      <item>Brazil</item>
+      <item>Brunei Darussalam</item>
+      <item>Bulgaria</item>
+      <item>Burkina Faso</item>
+      <item>Burundi</item>
+      <item>Cambodia</item>
+      <item>Cameroon</item>
+      <item>Canada</item>
+      <item>Chile</item>
+      <item>China</item>
+      <item>Colombia</item>
+      <item>Costa Rica</item>
+      <item>Cuba</item>
+      <item>Cyprus</item>
+      <item>Czech Republic</item>
+      <item>Democratic Republic Congo</item>
+      <item>Denmark</item>
+      <item>Djibouti</item>
+      <item>Dominican Republic</item>
+      <item>East Timor</item>
+      <item>Ecuador</item>
+      <item>Egypt</item>
+      <item>El Salvador</item>
+      <item>England</item>
+      <item>Eritrea</item>
+      <item>Estonia</item>
+      <item>Ethiopia</item>
+      <item>Faroe Islands</item>
+      <item>Fiji</item>
+      <item>Finland</item>
+      <item>France</item>
+      <item>French Polynesia</item>
+      <item>Gambia</item>
+      <item>Georgia (Sakartvelo)</item>
+      <item>Germany</item>
+      <item>Gabon</item>
+      <item>Ghana</item>
+      <item>Greece</item>
+      <item>Greenland - Kalaallit Nunaat</item>
+      <item>Grenada</item>
+      <item>Gouadeloupe</item>
+      <item>Guam</item>
+      <item>Guatemala</item>
+      <item>Guernsey</item>
+      <item>Guyana</item>
+      <item>Guyane</item>
+      <item>Haiti</item>
+      <item>Honduras</item>
+      <item>Hong Kong</item>
+      <item>Hrvatska (Croatia)</item>
+      <item>Hungary</item>
+      <item>Iceland</item>
+      <item>India</item>
+      <item>Indonesia</item>
+      <item>Iran</item>
+      <item>Iraq</item>
+      <item>Ireland</item>
+      <item>Israel</item>
+      <item>Italy</item>
+      <item>Jamaica</item>
+      <item>Japan</item>
+      <item>Jordan</item>
+      <item>Kazakhstan</item>
+      <item>Kenya</item>
+      <item>Korea Republic</item>
+      <item>Kosovo</item>
+      <item>Kurdistan</item>
+      <item>Kuwait</item>
+      <item>Kyrgyzstan</item>
+      <item>Laos</item>
+      <item>Latvia</item>
+      <item>Lebanon</item>
+      <item>Lesotho</item>
+      <item>Liberia</item>
+      <item>Libyan Arab Jamahiriya</item>
+      <item>Liechtenstein</item>
+      <item>Lithuania</item>
+      <item>Luxembourg</item>
+      <item>Macau</item>
+      <item>Macedonia</item>
+      <item>Malawi</item>
+      <item>Malaysia</item>
+      <item>Mali</item>
+      <item>Malta</item>
+      <item>Marshall Islands</item>
+      <item>Mauritania</item>
+      <item>Martinique</item>
+      <item>Mauritius</item>
+      <item>Mexico</item>
+      <item>Micronesia</item>
+      <item>Moldova</item>
+      <item>Monaco</item>
+      <item>Mongolia</item>
+      <item>Morocco</item>
+      <item>Mozambique</item>
+      <item>Namibia</item>
+      <item>Nepal</item>
+      <item>Netherlands</item>
+      <item>Netherlands Antilles</item>
+      <item>New Caledonia</item>
+      <item>New Zealand (Aotearoa)</item>
+      <item>Nicaragua</item>
+      <item>Nigeria</item>
+      <item>Niue</item>
+      <item>Norfolk Island</item>
+      <item>Northern Ireland</item>
+      <item>Northern Mariana Islands</item>
+      <item>Norway</item>
+      <item>Oman</item>
+      <item>Pakistan</item>
+      <item>Palau</item>
+      <item>Palestina</item>
+      <item>Panama</item>
+      <item>Papua New Guinea</item>
+      <item>Paraguay</item>
+      <item>Peru</item>
+      <item>Philippines</item>
+      <item>Portugal</item>
+      <item>Puerto Rico</item>
+      <item>Qatar</item>
+      <item>Reunion</item>
+      <item>Romania</item>
+      <item>Russian Federation (AsianPart)</item>
+      <item>Russian Federation (European Part)</item>
+      <item>Rwanda</item>
+      <item>Saint Kitts and Nevis</item>
+      <item>Saint Vincent and the Grenadines</item>
+      <item>Samoa (American Samoa)</item>
+      <item>Samoa (Western Samoa)</item>
+      <item>San Marino</item>
+      <item>Saudi Arabia</item>
+      <item>Scotland</item>
+      <item>Senegal</item>
+      <item>Seychelles</item>
+      <item>Sierra Leone</item>
+      <item>Singapore</item>
+      <item>Slovakia</item>
+      <item>Slovenia</item>
+      <item>Solomon Islands</item>
+      <item>Somalia</item>
+      <item>Somaliland</item>
+      <item>South Africa</item>
+      <item>Spain</item>
+      <item>Sri Lanka</item>
+      <item>Sudan</item>
+      <item>Suriname</item>
+      <item>Svalbard and Jan Mayen</item>
+      <item>Swaziland</item>
+      <item>Sweden</item>
+      <item>Switzerland</item>
+      <item>Syrian Arab Republic</item>
+      <item>Taiwan</item>
+      <item>Tanzania</item>
+      <item>Thailand</item>
+      <item>Tibet</item>
+      <item>Togo</item>
+      <item>Tonga</item>
+      <item>Trinidad and Tobago</item>
+      <item>Tunisia</item>
+      <item>Turkey</item>
+      <item>Turkmenistan</item>
+      <item>Turks and Caicos Islands</item>
+      <item>Uganda</item>
+      <item>Ukraine</item>
+      <item>United Arab Emirates</item>
+      <item>United Kingdom</item>
+      <item>Uruguay</item>
+      <item>USA</item>
+      <item>Uzbekistan</item>
+      <item>Vatican City State - Holy See</item>
+      <item>Venezuela</item>
+      <item>Viet Nam</item>
+      <item>Virgin Islands (British)</item>
+      <item>Virgin Islands (U.S.)</item>
+      <item>Wales</item>
+      <item>Yemen</item>
+      <item>Yugoslavia</item>
+      <item>Zambia</item>
+      <item>Zimbabwe</item>
+    </string-array>
+     <string name="viewpager_indicator">%1$d/%2$d</string>
+
+
+
+    <!--主页-->
+    <string name="main_name">融云</string>
+    <string name="main_conversation">会话</string>
+    <string name="main_group">广场</string>
+    <string name="main_chatroom">通讯录</string>
+    <string name="main_customer">意见反馈</string>
+    <string name="main_customer_xn">小能客服</string>
+    <string name="private_chat">发起聊天</string>
+    <string name="group_chat">创建群组</string>
+    <string name="add_contacts">添加好友</string>
+    <string name="add_select_group">创建群组</string>
+    <string name="set_personal_information">我的账号</string>
+    <string name="set_news_reminded">新消息提醒</string>
+    <string name="set_privacy">隐私</string>
+    <string name="set_set">设置</string>
+    <string name="set_rongcloud">关于 SealTalk</string>
+    <string name="set_logout">注销</string>
+    <string name="de_save">"保存"</string>
+
+    <string name="no_read_message">"···"</string>
+
+    <!--register activity -->
+    <string name="login_success">"登录成功"</string>
+
+    <!--设置-->
+    <string name="new_message_notice">开启消息免打扰</string>
+    <string name="new_message_show">新消息通知</string>
+    <string name="new_message_voice">声音</string>
+    <string name="new_message_vibration">震动</string>
+    <string name="new_message_prompt_voice">新消息提示音</string>
+    <string name="new_message_follow_system">跟随系统</string>
+    <string name="friend_confirmation">加我好友时需要验证</string>
+    <string name="the_blacklist">黑名单</string>
+    <string name="join_the_blacklist">加入黑名单</string>
+    <string name="blacklist_empty">黑名单为空</string>
+    <string name="portrait">头像</string>
+    <string name="my_username">昵称</string>
+    <string name="update_log">更新日志</string>
+    <string name="function_introduce">功能介绍</string>
+    <string name="version_number">V2.1.0</string>
+    <string name="dv_document">开发者文档</string>
+    <string name="rongcloud_web">官方网站</string>
+    <string name="new_version_update">当前版本</string>
+    <string name="de_notification_start">开始时间</string>
+    <string name="de_notification_end">结束时间</string>
+
+
+    <!-- friend list -->
+    <string name="de_item_delete_friend">"删除"</string>
+
+
+    <!--actionbar title -->
+    <string name="de_actionbar_myacc">"个人账号"</string>
+    <string name="de_actionbar_sub_group">"群组"</string>
+    <string name="de_actionbar_sub_private">"我的私人会话"</string>
+    <string name="de_actionbar_sub_discussion">"我的讨论组"</string>
+    <string name="de_actionbar_sub_system">"系统消息"</string>
+    <string name="de_actionbar_sub_defult">"聊天"</string>
+    <string name="de_actionbar_set_public">"公众号"</string>
+    <string name="de_actionbar_system">"系统消息"</string>
+
+    <string name="de_dialog_item_message_delete">删除消息</string>
+    <string name="de_notification_information">开启后，在设定时间段内收到新消息时不会响铃或振动。</string>
+
+    <string name="de_group_list_default_discussion_name">讨论组</string>
+    <string name="de_message_content_draft">[草稿]</string>
+    <string name="de_message_at_me">[有人@我]</string>
+
+    <!-- Aming 10月重构版 -->
+    <string name="start_chat">发起会话</string>
+    <string name="network_not_available">网络不可用</string>
+    <string name="login_api_fail">登录请求接口失败</string>
+    <string name="sync_userinfo_api_fail">同步用户信息接口请求失败</string>
+    <string name="get_token_api_fail">获取token请求接口失败</string>
+    <string name="sync_group_api_fail">同步群组信息请求接口失败</string>
+    <string name="phone_or_psw_error">手机或者密码错误</string>
+    <string name="phone_number_is_null">手机号不能为空</string>
+    <string name="Illegal_phone_number">非法手机号</string>
+    <string name="password_is_null">密码不能为空</string>
+    <string name="password_cannot_contain_spaces">密码不能包含空格</string>
+    <string name="phone_number_available">手机号可用</string>
+    <string name="phone_number_has_been_registered">手机号已被注册</string>
+    <string name="messge_send">短信已发出,请注意查收</string>
+    <string name="message_frequency">短信发送频率超限</string>
+    <string name="captcha_overdue">验证码过期,请重新请求</string>
+    <string name="verification_code_error">验证码错误</string>
+    <string name="register_success">注册成功</string>
+    <string name="forgot_password">找回密码</string>
+    <string name="new_user">新用户</string>
+    <string name="Login">登录</string>
+    <string name="phone_number">手机号</string>
+    <string name="password">密码</string>
+    <string name="nickname">昵称</string>
+    <string name="code">短信验证码</string>
+    <string name="send_code">发送验证码</string>
+    <string name="register">注册</string>
+    <string name="confirm_password">确认密码</string>
+    <string name="confirm">确认</string>
+    <string name="forget_password">忘记密码</string>
+
+    <string name="Done">完成</string>
+    <string name="exit_app">确定退出应用?</string>
+    <string name="No_friends">暂无好友</string>
+    <string name="Search">搜索</string>
+    <string name="new_friends">新的朋友</string>
+    <string name="group">群组</string>
+    <string name="public_service">公众号</string>
+    <string name="chatroom">聊天室</string>
+    <string name="groups">群聊</string>
+    <string name="chatroom1">聊天室 I</string>
+    <string name="add_success">加入成功</string>
+    <string name="not_group_members">非群组成员不能查看群组详情</string>
+    <string name="check_network">请检查网络</string>
+    <string name="chatroom2">聊天室 II</string>
+    <string name="chatroom3">聊天室 III</string>
+    <string name="chatroom4">聊天室 IV</string>
+    <string name="agreed_friend">已同意好友关系</string>
+    <string name="agree">接&#160;&#160;&#160;受</string>
+    <string name="request">已请求</string>
+    <string name="ignore">已忽略</string>
+    <string name="added">已添加</string>
+    <string name="deleted">已删除</string>
+    <string name="mobile_phone">手机号</string>
+    <string name="change_password">密码修改</string>
+    <string name="select_group_member">选择群组成员</string>
+    <string name="remove_group_member">移除群组成员</string>
+    <string name="add_group_member">添加群组成员</string>
+    <string name="edit_group_name">填写群名称(2-10字)</string>
+    <string name="create_group">创建群组</string>
+    <string name="created_group">创建了群组</string>
+    <string name="you">你</string>
+    <string name="request_friends">请求添加你为好友</string>
+    <string name="edit_phone">请输入 11 位手机号</string>
+    <string name="original_password">原密码不能为空</string>
+    <string name="new_password_not_null">新密码不能为空</string>
+    <string name="confirm_password_not_null">确认密码不能为空</string>
+    <string name="original_password_mistake">原密码填写错误</string>
+    <string name="passwords_invalid">密码必须为6-16位字符，区分大小写</string>
+    <string name="passwords_do_not_match">填写的确认密码与新密码不一致</string>
+    <string name="original_password_text">初始密码</string>
+    <string name="new_password">新密码</string>
+    <string name="confirm_new_password">确认新密码</string>
+    <string name="group_info">群组信息</string>
+    <string name="group_member_size">全部群成员</string>
+    <string name="group_name">群名称</string>
+    <string name="confirm_quit_group">确认退出群组?</string>
+    <string name="confirm_dismiss_group">确认解散群组?</string>
+    <string name="clean_history">是否清除会话聊天记录?</string>
+    <string name="set_top">会话置顶</string>
+    <string name="message_notice">消息免打扰</string>
+    <string name="search_message">查找聊天记录</string>
+    <string name="clean_message">清除聊天记录</string>
+    <string name="send_message">发起聊天</string>
+    <string name="quit_group">删除并退出</string>
+    <string name="dismiss_group">解散并退出</string>
+    <string name="user_details">用户详情</string>
+    <string name="black_state">黑名单状态</string>
+    <string name="divided_string">、</string>
+    <string name="change_group_name">修改群名称为</string>
+    <string name="quit_groups">退出了群组</string>
+    <string name="dismiss_groups">解散了群组</string>
+    <string name="join_group">加入了群组</string>
+    <string name="to_join_group">加入了群组</string>
+    <string name="invitation">邀请</string>
+    <string name="remove_group_before_str">将</string>
+    <string name="remove_group_after_str">移出了群组</string>
+    <string name="my_groups">群组</string>
+    <string name="code_is_null">验证码为空</string>
+    <string name="name_is_null">昵称不能为空</string>
+    <string name="name_contain_spaces">昵称不能包含空格</string>
+    <string name="remove_group_members">确认移除以下群成员?</string>
+    <string name="add_successful">添加成功</string>
+    <string name="remove_successful">移除成功</string>
+    <string name="least_one_friend">至少选择一位好友</string>
+    <string name="not_send_code">未向服务端获取验证码</string>
+    <string name="get_code">获取验证码</string>
+    <string name="clear_success">清除成功</string>
+    <string name="clear_failure">清除失败</string>
+    <string name="change_group_info">更改群组信息</string>
+    <string name="new_group_name">新的群名称</string>
+    <string name="update_success">更改成功</string>
+    <string name="quit_success">退出成功</string>
+    <string name="dismiss_success">解散成功</string>
+    <string name="group_name_not_is_null">群组昵称不能为空</string>
+    <string name="group_name_size_is_one">群名称不少于2个字</string>
+    <string name="create_group_success">群组创建成功</string>
+    <string name="group_header_api_fail">群组头像接口请求失败</string>
+    <string name="group_create_api_fail">群组创建接口请求失败</string>
+    <string name="upload_portrait_failed">上传头像失败</string>
+    <string name="phone_unregister">此号码未被注册</string>
+    <string name="group_portrait">群头像</string>
+    <string name="add_friend">加为好友</string>
+    <string name="add_text">加好友信息...</string>
+    <string name="request_success">请求成功</string>
+    <string name="can_not_add_yourself">自己不能添加自己为好友</string>
+    <string name="new_name">新昵称</string>
+    <string name="portrait_update_success">头像更新成功</string>
+    <string name="chat">会话</string>
+    <string name="contacts">通讯录</string>
+    <string name="discover">发现</string>
+    <string name="me">我</string>
+    <string name="mine_about">关于 SealTalk</string>
+    <string name="my_wallet">我的钱包</string>
+    <string name="mine_service">意见反馈</string>
+    <string name="mine_setting">账号设置</string>
+    <string name="account_setting">账号设置</string>
+    <string name="exit_login">退出登录</string>
+    <string name="clear_cache">清除缓存</string>
+    <string name="privacy">隐私</string>
+    <string name="new_message">接收新消息通知</string>
+    <string name="message_show_details">通知显示消息详情</string>
+
+    <string name="launched_location_sharing">发起了位置共享</string>
+    <string name="location_sharing_ended">位置共享已结束</string>
+    <string name="location">位置</string>
+    <string name="send_location">发送位置</string>
+    <string name="real_time_location_sharing">实时位置共享</string>
+    <string name="fetching">获取中……</string>
+    <string name="geographical_position">地理位置</string>
+    <string name="you_are_sharing_location">你正在共享位置</string>
+    <string name="person_is_sharing_loaction">人正在共享位置</string>
+    <string name="persons_are_sharing_loaction">人正在共享位置</string>
+    <string name="location_sharing_exit_promt">退出当前页面将会终止实时位置共享,确定退出？</string>
+    <string name="prompt">提示</string>
+    <string name="launched_a_location_sharing">我发起了位置共享</string>
+    <string name="sdk_version_update">SDK版本</string>
+    <string name="sealtalk_version_update">SealTalk版本</string>
+    <string name="all_group_member">全部群成员</string>
+    <string name="group_member_online_status">群成员在线状态</string>
+    <string name="group_announcement">群公告</string>
+    <string name="group_code">群二维码</string>
+    <string name="total_member">群成员</string>
+    <string name="select_contact">选择联系人</string>
+    <string name="current_password">原密码</string>
+    <string name="password_hint">6-16个字符,区分大小写</string>
+    <string name="start_voice">语音通话</string>
+    <string name="start_video">视频聊天</string>
+    <string name="browser_download">浏览器打开</string>
+    <string name="loacation_download">本地下载</string>
+    <string name="update_app_model_prepare">准备下载</string>
+    <string name="update_app_model_progress">正在下载 %1$d%2$s</string>
+    <string name="update_app_model_success">下载成功(点击安装)</string>
+    <string name="update_app_model_error">下载失败(点击浏览器下载)</string>
+    <string name="downloading_apk">正在后台下载...</string>
+    <string name="empty_group_notice">请编辑群公告</string>
+    <string name="group_notice_exist_confirm">退出本次编辑</string>
+    <string name="group_notice_post_confirm">该公告会通知全部群成员，是否发布？</string>
+    <string name="group_notice_prefix">\@所有人\n</string>
+    <string name="search_friend">添加好友</string>
+    <string name="setdisplayname">设置备注</string>
+    <string name="new_and_old_password">新旧密码一致</string>
+    <string name="nickname_show">昵称:</string>
+    <string name="ac_item_friend_nick_name">昵称:%1$s</string>
+    <string name="ac_search_no_result">没有搜索到%1$s相关的会话</string>
+    <string name="other_devices_login">账号在其它设备登录</string>
+    <string name="new_message_notice_title">消息免打扰</string>
+    <string name="other_devices_text">您的账号在别的设备上登录，您被迫下线!</string>
+    <string name="i_know">知道了</string>
+    <string name="update_name">昵称更改</string>
+    <string name="ac_search_no_result_pre">没有搜到</string>
+    <string name="ac_search_no_result_suffix">相关的信息</string>
+    <string name="ac_search_chat_title">聊天记录</string>
+    <string name="ac_search_chat_detail">共%1$d条与</string>
+    <string name="ac_search_chat_detail_one">共</string>
+    <string name="ac_search_chat_detail_two">条与</string>
+    <string name="ac_search_chat_detail_three">相关的聊天记录</string>
+    <string name="ac_search_nick_name">昵称： </string>
+    <string name="ac_contact_nick_name">昵称:</string>
+
+    <string name="ac_search_friend">联系人</string>
+    <string name="ac_search_group">群组</string>
+    <string name="ac_search_chatting_records">聊天记录</string>
+    <string name="ac_search_more_friend">查看更多联系人</string>
+    <string name="ac_search_more_group">查看更多群组</string>
+    <string name="ac_search_more_chatting_records">查看更多聊天记录</string>
+
+    <string name="search_item_chat_records">%d条相关记录</string>
+    <string name="online">在线</string>
+    <string name="offline">离线</string>
+    <string name="web_online">网页在线</string>
+    <string name="pc_online">电脑在线</string>
+    <string name="phone_online">手机在线</string>
+    <string name="ipad_online">iPad在线</string>
+    <string name="imac_online">iMac 在线</string>
+    <string name="set_user_online_status">设置用户在线状态</string>
+    <string name="read_receipt_detail">回执详情</string>
+    <string name="read_receipt_unread_persons">%1$d人未读</string>
+    <string name="read_receipt_read_persons">%1$d人已读</string>
+    <string name="read_receipt_no_person_read">全部未读</string>
+    <string name="read_receipt_no_person_unread">全部已读</string>
+    <string name="des_add_friend_to_black_list">你将不再收到对方的消息</string>
+
+    <string name="clean_private_chat_history">确定删除聊天记录吗</string>
+    <string name="clean_group_chat_history">确定删除群聊天记录吗</string>
+    <string name="clean_discussion_chat_history">确定删除讨论组聊天记录吗</string>
+    <string name="join_chat_room_error_toast">聊天室ID为空,请稍后重试</string>
+
+    <string name="activity_detail_discussion_to_top">置顶</string>
+    <string name="activity_detail_discussion_not_disturb">消息免打扰</string>
+    <string name="ac_about_seal_talk_version">SealTalk 版本</string>
+    <string name="ac_about_sdk_version">SDK 版本</string>
+    <string name="ac_about_shut_down_debug_mode">关闭debug模式</string>
+    <string name="ac_detail_discussion_member_size">讨论组成员()</string>
+    <string name="ac_detail_discussion_clear_messages">清空聊天信息</string>
+    <string name="ac_detail_discussion_start_group_conversation">开启群组会话</string>
+    <string name="ac_detail_discussion_group_display_name">群组昵称</string>
+    <string name="ac_detail_discussion_start_chat">发起聊天</string>
+    <string name="ac_detail_discussion_delete_and_quit_discussion">删除并退出讨论组</string>
+    <string name="ac_detail_discussion_dismiss_group">解散群组</string>
+    <string name="ac_detail_discussion_no">无</string>
+
+    <string name="fr_chat_room">聊天室</string>
+    <string name="fr_chat_room_one">聊天室 I</string>
+    <string name="fr_chat_room_two">聊天室 II</string>
+    <string name="fr_chat_room_three">聊天室 III</string>
+    <string name="fr_chat_room_four">聊天室 IV</string>
+    <string name="fr_chat_room_join_failure">加入聊天室失败</string>
+
+    <string name="ac_new_friend_list_no_data">暂无数据</string>
+    <string name="share_dialog_share">分享</string>
+    <string name="share_dialog_cancel">取消</string>
+    <string name="share_dialog_hint">说些什么</string>
+    <string name="share_dialog_from">来自：UC浏览器</string>
+
+    <string name="dialog_bottom_picture">拍照</string>
+    <string name="dialog_bottom_import_from_local">从本地导入</string>
+    <string name="fr_group_list_not_join_the_group">暂未加入群组</string>
+    <string name="ac_select_friend">选择联系人</string>
+    <string name="ac_select_friend_sure">确定</string>
+
+    <string name="ac_note_info_name">备注名</string>
+    <string name="ac_note_info">备注信息</string>
+    <string name="ac_note_info_save">保存</string>
+
+    <string name="contact_notification_someone_agree_your_request">%1$s已同意你的好友请求</string>
+    <string name="contact_notification_agree_your_request">对方已同意你的好友请求</string>
+    <string name="ac_group_list_group_number">%1$d个群组</string>
+    <string name="ac_share_receiver_from">来自：%1$s</string>
+
+    <string name="ac_search_phone_number">手机号</string>
+    <string name="layout_dialog_loading">正在加载</string>
+    <string name="seal_mine_fragment_user_portrait">用户头像</string>
+    <string name="item_filter_group_list_include">包含：</string>
+    <string name="rs_ada_user_ship_add">已添加</string>
+    <string name="seal_set_push_language">设置 Push 中文</string>
+    <string name="seal_set_push_detail">显示 Push 内容</string>
+    <string name="seal_set_push_receive">接收 Push 消息</string>
+    <string name="cs_evaluation">评价</string>
+    <string name="cs_submit_evaluation">提交评价</string>
+    <string name="cs_evaluate_resolved_title">请问客服是否解决了您的问题</string>
+    <string name="cs_evaluate_resolved">已解决</string>
+    <string name="cs_evaluate_unresolved">未解决</string>
+    <string name="cs_evaluate_star_title">请您对客服进行评价</string>
+    <string name="cs_evaluate_problem_title">存在哪些问题</string>
+    <string name="cs_evaluate_tag_must">必须选择标签</string>
+    <string name="cs_evaluate_input_must">必须输入建议</string>
+    <string name="cs_evaluate_select_must">必选</string>
+
+
+    <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="no_net">请查看网络是否连接</string>
+    <string name="download_notification_title">正在下载</string>
+    <string name="download_notification_summary">%d个任务</string>
+
+    <string name="label_download">下载</string>
+    <string name="label_select_all">全选</string>
+    <string name="label_select_none">取消全选</string>
+    <string name="title_download">下载管理</string>
+    <string name="download_retry">重试</string>
+    <string name="download_pause">暂停</string>
+    <string name="download_resume">继续</string>
+    <string name="download_finish">完成</string>
+    <string name="download_wait">等待</string>
+    <string name="download_unknown">未知</string>
+    <string name="install_package">正在安装%s</string>
+    <string name="install_succeeded">安装%s成功</string>
+    <string name="install_failed">安装%s失败</string>
+    <string name="open_failed">未找到打开此类型文件的应用</string>
+    <string name="download_clear">清空</string>
+    <string name="download_delete">删除</string>
+    <string name="download_edit">编辑</string>
+    <string name="download_done">完成</string>
+    <string name="download_clear_task_waring">确认清空所有下载任务?</string>
+    <string name="download_remove_task_waring">确定不再下载此资源?</string>
+    <string name="download_delete_waring">确认删除已下载资源?</string>
+    <string name="download_cancel">取消</string>
+    <string name="download_no_tasks">当前无任务</string>
+    <string name="download_no_resources">当前无资源</string>
+    <string name="download_select_waring">请选择资源</string>
+    <string name="download_title_downloading">下载中</string>
+    <string name="download_title_downloaded">已下载</string>
+    <string name="download_summary">%d个资源</string>
+    <string name="download_date_format">M月d日</string>
+    <string name="download_pause_all">全部暂停</string>
+    <string name="download_start_all">全部开始</string>
+
+
+    <string name="select_mode">选择模式</string>
+    <string name="mode_single">单选</string>
+    <string name="mode_multi">多选</string>
+    <string name="max_select_amount">最多可选</string>
+    <string name="hint_default_amount">默认9张</string>
+    <string name="enable_camera">是否显示拍照按钮</string>
+    <string name="enable_croper">正方型截图</string>
+    <string name="enable_filter">是否使用滤镜</string>
+    <string name="enable">显示</string>
+    <string name="disable">不显示</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+
+    <string name="choose">确定</string>
+
+
+    <!-- 请替换成在语音云官网申请的appid -->
+    <string name="app_id">5be9314c</string>
+    <string name="example_explain">本示例为讯飞语音Android平台开发者提供语音听写、语法识别、语义理解和语音合成等代码样例，旨在让用户能够依据该示例快速开发出基于语音接口的应用程序。</string>
+    <string name="text_tts_source">科大讯飞作为中国最大的智能语音技术提供商，在智能语音技术领域有着长期的研究积累，并在中文语音合成、语音识别、口语评测等多项技术上拥有国际领先的成果。科大讯飞是我国唯一以语音技术为产业化方向的“国家863计划成果产业化基地”…</string>
+    <string name="text_tts_source_en">iFLYTEK is a national key software enterprise dedicated to the research of intelligent speech and language technologies, development of software and chip products, provision of speech information services, and integration of E-government systems. The intelligent speech technology of iFLYTEK, the core technology of the company, represents the top level in the world.</string>
+    <string name="text_isr_abnf_hint">\t上传内容为：\n\t#ABNF 1.0 gb2312;\n\tlanguage zh-CN;\n\tmode voice;\n\troot $main;\n\t$main = $place1 到$place2 ;\n\t$place1 = 北京 | 武汉 | 南京 | 天津 | 东京;\n\t$place2 = 上海 | 合肥;</string>
+    <string name="text_understand_hint">\t您可以说：\n\t今天的天气怎么样?\n\t北京到上海的火车?\n\t来首歌吧?\n\n\t更多语义请登录：\n\thttp://aiui.xfyun.cn/ \n\t配置您的专属语义吧!</string>
+    <!-- 听写 -->
+    <string name="text_begin">请开始说话…</string>
+    <string name="text_begin_recognizer">开始音频流识别</string>
+    <string name="text_begin_ise">开始音频流评测</string>
+    <string name="text_upload_contacts">上传联系人</string>
+    <string name="text_upload_userwords">上传用户词表</string>
+    <string name="text_upload_success">上传成功</string>
+    <string name="text_userword_empty">词表下载失败或内容为空</string>
+    <string name="text_download_success">下载成功</string>
+    <string name="pref_key_iat_show">iat_show</string>
+    <string name="pref_title_iat_show">显示听写界面</string>
+    <string name="text_show_contacts">上传联系人/词表显示</string>
+    <string name="text_show_iat_result">听写结果显示</string>
+
+    <string name="pref_key_translate">translate</string>
+    <string name="pref_title_translate">翻译</string>
+
+    <string name="face_model_delete">人脸模型删除</string>
+
+    <string name="title_face_idf">人脸1:N检索示例</string>
+    <string name="title_vocal_idf">声纹1:N检索示例</string>
+
+
+    <!-- 合成 -->
+    <string-array name="engine_entries">
+        <item>本地合成</item>
+        <item>在线合成</item>
+    </string-array>
+    <string-array name="engine_values">
+        <item>local</item>
+        <item>cloud</item>
+    </string-array>
+    <string-array name="voicer_cloud_entries">
+        <item>小燕—女青、中英、普通话</item>
+        <item>小宇—男青、中英、普通话</item>
+        <item>凯瑟琳—女青、英</item>
+        <item>亨利—男青、英</item>
+        <item>玛丽—女青、英</item>
+        <item>小研—女青、中英、普通话</item>
+        <item>小琪—女青、中英、普通话</item>
+        <item>小峰—男青、中英、普通话</item>
+        <item>小梅—女青、中英、粤语</item>
+        <item>小莉—女青、中英、台湾普通话</item>
+        <item>小蓉—女青、中、四川话</item>
+        <item>小芸—女青、中、东北话</item>
+        <item>小坤—男青、中、河南话</item>
+        <item>小强—男青、中、湖南话</item>
+        <item>小莹—女青、中、陕西话</item>
+        <item>小新—男童、中、普通话</item>
+        <item>楠楠—女童、中、普通话</item>
+        <item>老孙—男老、中、普通话</item>
+    </string-array>
+    <string-array name="voicer_cloud_values">
+        <item>xiaoyan</item>
+        <item>xiaoyu</item>
+        <item>catherine</item>
+        <item>henry</item>
+        <item>vimary</item>
+        <item>vixy</item>
+        <item>xiaoqi</item>
+        <item>vixf</item>
+        <item>xiaomei</item>
+        <item>xiaolin</item>
+        <item>xiaorong</item>
+        <item>xiaoqian</item>
+        <item>xiaokun</item>
+        <item>xiaoqiang</item>
+        <item>vixying</item>
+        <item>xiaoxin</item>
+        <item>nannan</item>
+        <item>vils</item>
+    </string-array>
+    <string-array name="emot_entries">
+        <item>正常</item>
+        <item>高兴</item>
+        <item>悲伤</item>
+        <item>生气</item>
+    </string-array>
+    <string-array name="emot_values">
+        <item>neutral</item>
+        <item>happy</item>
+        <item>sad</item>
+        <item>angry</item>
+    </string-array>
+    <string-array name="stream_entries">
+        <item>通话</item>
+        <item>系统</item>
+        <item>铃声</item>
+        <item>音乐</item>
+        <item>闹铃</item>
+        <item>通知</item>
+    </string-array>
+    <string-array name="stream_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string formatted="false" name="tts_toast_format">缓冲进度为%d%%，播放进度为%d%%</string>
+    <!-- 语言 -->
+    <string-array name="language_entries">
+        <item>普通话</item>
+        <item>粤语</item>
+        <item>英语</item>
+    </string-array>
+    <string-array name="language_values">
+        <item>mandarin</item>
+        <item>cantonese</item>
+        <item>en_us</item>
+    </string-array>
+    <!-- 语音评测 -->
+    <string name="text_en_word">"[word]\napple\nbanana\norange"</string>
+    <string name="text_en_sentence">"The quick brown fox jumps over the lazy dog."</string>
+    <string name="text_cn_syllable">"知，痴，是"</string>
+    <string name="text_cn_word">"磁铁，率领，脆弱，动手，古筝"</string>
+    <string name="text_cn_sentence">"一座座雪峰插入云霄，峰顶银光闪闪，大大小小的湖泊，像颗颗宝石镶嵌在彩带般的沟谷中。"</string>
+    <string-array name="ise_language_entries">
+        <item>英语</item>
+        <item>汉语</item>
+    </string-array>
+    <string-array name="ise_language_values">
+        <item>en_us</item>
+        <item>zh_cn</item>
+    </string-array>
+    <string-array name="category_entries">
+        <item>单字</item>
+        <item>词语</item>
+        <item>句子</item>
+    </string-array>
+    <string-array name="category_values">
+        <item>read_syllable</item>
+        <item>read_word</item>
+        <item>read_sentence</item>
+    </string-array>
+    <string-array name="result_level_entries">
+        <item>plain</item>
+        <item>complete</item>
+    </string-array>
+    <!-- 标点符号 -->
+    <string-array name="punc_entries">
+        <item>有标点</item>
+        <item>无标点</item>
+    </string-array>
+    <string-array name="punc_values">
+        <item>1</item>
+        <item>0</item>
+    </string-array>
+    <string-array name="dwa_entries">
+        <item>开启</item>
+        <item>关闭</item>
+    </string-array>
+
+
+
+    <!-- 语言 -->
+    <string-array name="machine_entries">
+        <item>鲁谷</item>
+        <item>广州</item>
+        <item>森华</item>
+    </string-array>
+    <string-array name="machine_values">
+        <item>http://bj.voicecloud.cn/msp.do</item>
+        <item>http://gz.voicecloud.cn/msp.do</item>
+        <item>http://dx.xf-yun.com/msp.do</item>
+    </string-array>
+
+</resources>

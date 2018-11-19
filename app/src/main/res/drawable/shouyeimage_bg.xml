@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 首页标题左边的图片背景 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+    <solid  android:color="@color/ac_filter_string_color"/>
+    <corners 
+        android:topLeftRadius="1dp"
+        android:topRightRadius="1dp"
+        android:bottomLeftRadius="1dp"
+        android:bottomRightRadius="1dp"/>
+    
+    <!-- 
+    <stroke
+		android:width="1dp"
+		android:color="#ff0000"/>
+		 -->
+
+</shape>

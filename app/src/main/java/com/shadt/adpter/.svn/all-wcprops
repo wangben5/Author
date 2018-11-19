@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/webproject/!svn/ver/5172/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/adpter
+END
+PopAdapter.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/webproject/!svn/ver/5171/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/adpter/PopAdapter.java
+END
+BasePopupWindowForListView.java
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/webproject/!svn/ver/5172/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/adpter/BasePopupWindowForListView.java
+END
+MyPagerAdapter.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/webproject/!svn/ver/5171/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/adpter/MyPagerAdapter.java
+END
+ExamineAdapter.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/webproject/!svn/ver/6405/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/adpter/ExamineAdapter.java
+END
+ViewHolder.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/webproject/!svn/ver/5172/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/adpter/ViewHolder.java
+END
+CommonAdapter.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/webproject/!svn/ver/5172/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/adpter/CommonAdapter.java
+END
+ImageGridAdapter.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/webproject/!svn/ver/5171/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/adpter/ImageGridAdapter.java
+END
+CustomAdapter.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/webproject/!svn/ver/5172/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/adpter/CustomAdapter.java
+END

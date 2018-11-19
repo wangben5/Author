@@ -1,0 +1,390 @@
+package com.shadt.adpter;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.Intent;
+import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.lidroid.xutils.BitmapUtils;
+import com.shadt.activity.AddActivity2;
+import com.shadt.activity.ImggridActivity;
+import com.shadt.activity.PictrueActivity;
+import com.shadt.activity.QuanpingActivity;
+import com.shadt.bean.txtandpicBean;
+import com.shadt.news.R;
+import com.shadt.util.Contacts;
+import com.shadt.util.ImageLoader;
+import com.shadt.util.ImageLoader.Type;
+
+public class CustomAdapter extends
+		RecyclerView.Adapter<CustomAdapter.ViewHolder> {
+
+	private List<txtandpicBean> dataList;
+	Context context;
+	private OnItemPressedListener onItemPressedListener;
+	Map<String, Object> map_list = new HashMap<String, Object>();
+
+	private boolean show_txt_pic_vid;
+
+	private BitmapUtils xbitmap;
+	private AlertDialog myDialog;
+	String ip="";
+	//取出图片，当只有一张图片就不能删除图片。
+	List<String> img_list;
+	public CustomAdapter(List<txtandpicBean> data, Context context,String ip) {
+		this.dataList = data;
+		this.context = context;
+		this.ip=ip;
+		xbitmap = new BitmapUtils(context);
+	}
+
+	@Override
+	public int getItemCount() {
+		return dataList.size();
+	}
+
+	// 替换视图内的内容
+	@Override
+	public void onBindViewHolder(ViewHolder viewHolder, int position) {
+
+		if (dataList.size() <= 1) {
+			viewHolder.img_down.setVisibility(View.GONE);
+			viewHolder.img_up.setVisibility(View.GONE);
+		} else {
+			viewHolder.img_down.setVisibility(View.VISIBLE);
+			viewHolder.img_up.setVisibility(View.VISIBLE);
+			if (position == 0) {
+				viewHolder.img_up.setVisibility(View.GONE);
+			} else if (position == dataList.size() - 1) {
+				viewHolder.img_down.setVisibility(View.GONE);
+			}
+		}
+		// 设置图片
+		if (TextUtils.isEmpty(dataList.get(position).getPic())) {
+			viewHolder.img_picture.setImageResource(R.drawable.img_txt);
+		} else {
+			if (dataList.get(position).getPic().contains("/News/image/")) {
+				ImageLoader.getInstance(3, Type.LIFO)
+						.loadImage(dataList.get(position).getPic(),
+								viewHolder.img_picture);
+				xbitmap.display(viewHolder.img_picture, dataList.get(position).getPic());
+			} else {
+				if (!dataList.get(position).getPic().contains("http")) {
+					xbitmap.display(viewHolder.img_picture, ip+Contacts.IP + "/"
+							+ dataList.get(position).getPic());
+				} else {
+					xbitmap.display(viewHolder.img_picture, dataList.get(position).getPic());				}
+			}
+		}
+		show_txt_pic_vid = false;
+		viewHolder.bottom_menu.setVisibility(View.GONE);
+		viewHolder.btn_add.setVisibility(View.VISIBLE);
+		viewHolder.txt_content.setText("" + dataList.get(position).getTxt());
+
+	}
+
+	// 由RecyclerView的Layout manager来生成一个新的ViewHolder
+	@Override
+	public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
+		View v = LayoutInflater.from(viewGroup.getContext()).inflate(
+				R.layout.add_item, viewGroup, false);
+		return new ViewHolder(v);
+	}
+
+	/**
+	 * 继承RecyclerView的ViewHolder来自定义一个视图内的ViewHolder
+	 */
+	public class ViewHolder extends RecyclerView.ViewHolder {
+
+		private ImageView img_picture, img_delete, img_up, img_down, btn_add;
+		private TextView txt_content;
+		LinearLayout btn_add_content, btn_add_picture, btn_add_video,
+				bottom_menu;
+		RelativeLayout rel_bottom_outside;
+
+		public ViewHolder(View itemView) {
+			super(itemView);
+			if (itemView != null) {
+
+				
+				txt_content = (TextView) itemView
+						.findViewById(R.id.txt_content);
+				img_picture = (ImageView) itemView.findViewById(R.id.picture);
+				img_delete = (ImageView) itemView.findViewById(R.id.delete);
+				img_up = (ImageView) itemView.findViewById(R.id.img_up);
+				img_down = (ImageView) itemView.findViewById(R.id.img_down);
+				btn_add = (ImageView) itemView.findViewById(R.id.btn_add);
+				btn_add_content = (LinearLayout) itemView
+						.findViewById(R.id.btn_add_text);
+				btn_add_picture = (LinearLayout) itemView
+						.findViewById(R.id.btn_add_picture);
+				btn_add_video = (LinearLayout) itemView
+						.findViewById(R.id.btn_add_video);
+				bottom_menu = (LinearLayout) itemView
+						.findViewById(R.id.bottom_menu);
+				rel_bottom_outside = (RelativeLayout) itemView
+						.findViewById(R.id.rel_bottom_outside);
+
+				img_delete.setOnClickListener(new OnClickListener() {
+
+					@Override
+					public void onClick(View v) {
+						// TODO Auto-generated method stub
+						img_list=new ArrayList<String>();
+						for (int i = 0; i < dataList.size(); i++) {
+							if (!TextUtils.isEmpty(dataList.get(i).getPic())) {
+								img_list.add(dataList.get(i).getPic());
+							}
+						}
+						if (TextUtils.isEmpty(dataList.get(getPosition()).getPic())) {
+							delete_dialog(getPosition());
+						}else{
+							if (img_list.size()==1) {
+								Toast.makeText(context, "至少保留一张图片", 0).show();
+							}else{
+								delete_dialog(getPosition());
+							}
+						}
+					}
+				});
+				img_up.setOnClickListener(new OnClickListener() {
+
+					@Override
+					public void onClick(View v) {
+						// TODO Auto-generated method stub
+						// item_animal(0, getPosition());
+						show_txt_pic_vid = false;
+						bottom_menu.setVisibility(View.GONE);
+						btn_add.setVisibility(View.VISIBLE);
+						txtandpicBean examineBean2 = new txtandpicBean();
+						examineBean2.setTxt(dataList.get(getPosition() - 1)
+								.getTxt());
+						examineBean2.setPic(dataList.get(getPosition() - 1)
+								.getPic());
+//						txtandpicBean examineBean1 = new txtandpicBean();
+//						examineBean1.setTxt(dataList.get(getPosition())
+//								.getTxt());
+//						examineBean1.setPic(dataList.get(getPosition())
+//								.getPic());
+						dataList.remove(getPosition() - 1);
+						notifyItemRemoved(getPosition() - 1);
+						dataList.add(getPosition(), examineBean2);
+						notifyItemInserted(getPosition());
+//						dataList.set(getPosition(), examineBean2);
+//						dataList.set(getPosition()-1, examineBean1);
+//						notifyItemMoved(getPosition(), getPosition()-1);
+						notifyItemChanged(getPosition()-1);
+						notifyItemChanged(getPosition());
+						
+					}
+				});
+				img_down.setOnClickListener(new OnClickListener() {
+
+					@Override
+					public void onClick(View v) {
+						// TODO Auto-generated method stub
+						// item_animal(1, getPosition());
+						show_txt_pic_vid = false;
+						bottom_menu.setVisibility(View.GONE);
+						btn_add.setVisibility(View.VISIBLE);
+						txtandpicBean examineBean1 = new txtandpicBean();
+						examineBean1.setTxt(dataList.get(getPosition())
+								.getTxt());
+						examineBean1.setPic(dataList.get(getPosition())
+								.getPic());
+//						txtandpicBean examineBean2 = new txtandpicBean();
+//						examineBean2.setTxt(dataList.get(getPosition()+1)
+//								.getTxt());
+//						examineBean2.setPic(dataList.get(getPosition()+1)
+//								.getPic());
+						dataList.remove(getPosition());
+						notifyItemRemoved(getPosition());
+						dataList.add(getPosition() + 1, examineBean1);
+						notifyItemInserted(getPosition() + 1);
+						
+//						dataList.set(getPosition(), examineBean2);
+//						dataList.set(getPosition()+1, examineBean1);
+//						notifyItemMoved(getPosition(), getPosition()+1);
+						notifyItemChanged(getPosition()+1);
+						notifyItemChanged(getPosition());
+						
+					}
+				});
+				
+				txt_content.setOnClickListener(new OnClickListener() {
+
+					@Override
+					public void onClick(View v) {
+						// TODO Auto-generated method stub
+						show_txt_pic_vid = false;
+						bottom_menu.setVisibility(View.GONE);
+						btn_add.setVisibility(View.VISIBLE);
+						Intent it = new Intent(context, QuanpingActivity.class);
+						it.putExtra("context", dataList.get(getPosition())
+								.getTxt());
+						it.putExtra("length", 1000);
+						it.putExtra("tuwen", true);
+						it.putExtra("enable", true);
+						it.putExtra("title", "编辑文字");
+						it.putExtra("addnext", false);
+						it.putExtra("position", getPosition());
+						context.startActivity(it);
+						AddActivity2.onclick_position=getPosition();
+					}
+				});
+				img_picture.setOnClickListener(new OnClickListener() {
+
+					@Override
+					public void onClick(View v) {
+						// TODO Auto-generated method stub
+						if (TextUtils.isEmpty(dataList.get(getPosition())
+								.getPic())) {
+							selectFromAlbum(getPosition(), false, 1);
+							AddActivity2.onclick_position=getPosition();
+						} else {
+							Intent it = new Intent(context,
+									PictrueActivity.class);
+							it.putExtra("context", dataList.get(getPosition())
+									.getPic());
+							it.putExtra("title", "编辑图片");
+							it.putExtra("position", getPosition());
+							it.putExtra("class_name",
+									AddActivity2.class.getName());
+							context.startActivity(it);
+							AddActivity2.onclick_position=getPosition();
+						}
+					}
+				});
+				btn_add.setOnClickListener(new OnClickListener() {
+
+					@Override
+					public void onClick(View v) {
+						// TODO Auto-generated method stub
+						show_txt_pic_vid = true;
+						bottom_menu.setVisibility(View.VISIBLE);
+						btn_add.setVisibility(View.GONE);
+					}
+				});
+
+				btn_add_video.setOnClickListener(new OnClickListener() {
+
+					@Override
+					public void onClick(View v) {
+						// TODO Auto-generated method stub
+						show_txt_pic_vid = false;
+						bottom_menu.setVisibility(View.GONE);
+						btn_add.setVisibility(View.VISIBLE);
+					}
+				});
+				btn_add_content.setOnClickListener(new OnClickListener() {
+
+					@Override
+					public void onClick(View v) {
+						// TODO Auto-generated method stub
+						show_txt_pic_vid = false;
+						bottom_menu.setVisibility(View.GONE);
+						btn_add.setVisibility(View.VISIBLE);
+						Intent it = new Intent(context, QuanpingActivity.class);
+						it.putExtra("context", dataList.get(getPosition())
+								.getTxt());
+						it.putExtra("length", 1000);
+						it.putExtra("tuwen", true);
+						it.putExtra("enable", true);
+						it.putExtra("title", "编辑文字");
+						it.putExtra("addnext", true); // 添加下一个栏目
+						it.putExtra("position", getPosition());
+						context.startActivity(it);
+						AddActivity2.onclick_position=getPosition();
+					}
+				});
+				btn_add_picture.setOnClickListener(new OnClickListener() {
+
+					@Override
+					public void onClick(View v) {
+						// TODO Auto-generated method stub
+						show_txt_pic_vid = false;
+						bottom_menu.setVisibility(View.GONE);
+						btn_add.setVisibility(View.VISIBLE);
+						selectFromAlbum(getPosition(), true, 100);
+						AddActivity2.onclick_position=getPosition();
+						// open_carmare(position,true); //true 表示 添加 下一个栏目
+					}
+				});
+				
+
+				rel_bottom_outside.setOnClickListener(new OnClickListener() {
+
+					@Override
+					public void onClick(View v) {
+						// TODO Auto-generated method stub
+						show_txt_pic_vid = false;
+						bottom_menu.setVisibility(View.GONE);
+						btn_add.setVisibility(View.VISIBLE);
+					}
+				});
+			}
+		}
+	}
+
+	public void setOnItemPressedListener(
+			OnItemPressedListener onItemPressedListener) {
+		this.onItemPressedListener = onItemPressedListener;
+	}
+
+	public static interface OnItemPressedListener {
+		void onItemClick(int position);
+
+		boolean OnItemLongClick(int position);
+	}
+
+	private void selectFromAlbum(int p, boolean addnext, int num) {
+		Intent it = new Intent(context, ImggridActivity.class);
+		it.putExtra("type", true);
+		it.putExtra("position", p);
+		it.putExtra("add", addnext);
+		it.putExtra("class_name", AddActivity2.class.getName());
+		it.putExtra("num", num);
+		context.startActivity(it);
+	}
+
+	public void delete_dialog(final int position) {
+		// TODO Auto-generated method stub
+
+		myDialog = new AlertDialog.Builder(context).create();
+		myDialog.show();
+		myDialog.getWindow().setContentView(R.layout.popu_delete);
+		myDialog.getWindow().findViewById(R.id.txt_save_no)
+				.setOnClickListener(new View.OnClickListener() {
+					@Override
+					public void onClick(View v) {
+						myDialog.dismiss();
+					}
+				});
+		myDialog.getWindow().findViewById(R.id.txt_save)
+				.setOnClickListener(new View.OnClickListener() {
+					@Override
+					public void onClick(View v) {
+							if (onItemPressedListener != null) {
+								onItemPressedListener.onItemClick(position);
+							}
+						myDialog.dismiss();
+					}
+				});
+	}
+
+}

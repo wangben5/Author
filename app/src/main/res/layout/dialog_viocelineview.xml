@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:voiceView="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <com.shadt.ui.widget.viocelineview.VoiceLineView
+        android:id="@+id/voicLine"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/yuanjian3"
+        voiceView:fineness="three"
+        voiceView:lineSpeed="90"
+        voiceView:maxVolume="100"
+        voiceView:middleLine="@color/main_bg"
+        voiceView:middleLineHeight="1dp"
+        voiceView:rectSpace="2dp"
+        voiceView:rectWidth="5dp"
+        voiceView:sensibility="four"
+        voiceView:viewMode="line"
+        voiceView:voiceLine="@color/main_bg" />
+
+    <ImageView
+        android:id="@+id/img_finish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:padding="10dp"
+        android:src="@drawable/cha"
+        android:visibility="gone" />
+
+</RelativeLayout>

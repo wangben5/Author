@@ -1,0 +1,327 @@
+package com.shadt.activity;
+
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.Bundle;
+import android.text.TextUtils;
+import android.util.DisplayMetrics;
+import android.util.Log;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.edmodo.cropper.CropImageView;
+import com.lidroid.xutils.BitmapUtils;
+import com.shadt.news.R;
+import com.shadt.util.Contacts;
+import com.shadt.util.ImageTools;
+import com.shadt.util.OtherFinals;
+
+public class PictrueActivity extends BaseActivity {
+	ImageView img;
+	ImageView delete, yes, img_caijian;
+	CropImageView cropimage;
+	int position = 0;
+	BitmapUtils bitmap_util;
+	Context mcontext = PictrueActivity.this;
+	RelativeLayout rela_buttom;
+	boolean is_delete = true;
+	String my_title = "";
+	TextView title, txt_changge;
+	LinearLayout line_back;
+	Bitmap bitmaps;
+	String pic_name = "";
+	public static String img_path = "";
+	String class_name = "";
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_pictrue);
+		bitmap_util = new BitmapUtils(mcontext);
+		Intent it = getIntent();
+		img_path = it.getStringExtra("context");
+		is_delete = it.getBooleanExtra("delete", true);
+		my_title = it.getStringExtra("title");
+		position = it.getIntExtra("position", 0);
+		class_name = it.getStringExtra("class_name");
+		initPages();
+		
+		Log.v("ceshi", "img_path:"+img_path);
+		bitmap_util.configDefaultLoadFailedImage(R.drawable.img_no_pic);
+		 if(img_path.contains("/News/image/")) {
+			bitmaps = BitmapFactory.decodeFile(img_path);
+			img.setImageBitmap(bitmaps);
+		}else{
+			if (img_path.contains("http")) {
+				bitmap_util.display(img, ""+img_path);
+			}else{
+				bitmap_util.display(img, get_sharePreferences_fuwuqi()
+						+ Contacts.IP + "/" + img_path);
+			}
+		}
+		if (is_delete == false) {
+			rela_buttom.setVisibility(View.GONE);
+			txt_changge.setVisibility(View.GONE);
+		}else{
+			txt_changge.setVisibility(View.VISIBLE);
+		}
+	}
+
+	@Override
+	public void initPages() {
+		// TODO Auto-generated method stub
+		img = (ImageView) findViewById(R.id.img);
+		delete = (ImageView) findViewById(R.id.img_del);
+		yes = (ImageView) findViewById(R.id.img_yes);
+		rela_buttom = (RelativeLayout) findViewById(R.id.rela_buttom);
+		delete.setOnClickListener(this);
+		yes.setOnClickListener(this);
+		title = (TextView) findViewById(R.id.title);
+		title.setText(my_title);
+		line_back = (LinearLayout) findViewById(R.id.line_back);
+		img_caijian = (ImageView) findViewById(R.id.img_caijian);
+		line_back.setOnClickListener(this);
+		img_caijian.setOnClickListener(this);
+		cropimage = (CropImageView) findViewById(R.id.cropimage);
+		txt_changge = (TextView) findViewById(R.id.txt_changge);
+		txt_changge.setOnClickListener(this);
+	}
+	
+	public boolean caijian = false;  //是否是在裁剪的状态
+	private List<String> img_list;
+	
+	@Override
+	public void onClickListener(View v) {
+		// TODO Auto-generated method stub
+		switch (v.getId()) {
+		case R.id.txt_changge:
+			
+			Intent it = new Intent(mcontext, ImggridActivity.class);
+			it.putExtra("add", false);
+			it.putExtra("position", position);
+			it.putExtra("num", 1);
+			it.putExtra("class_name", PictrueActivity.class.getName());
+			startActivity(it);
+			cropimage.setVisibility(View.GONE);
+			img.setVisibility(View.VISIBLE);
+			caijian = false;
+			img_caijian.setVisibility(View.VISIBLE);
+			break;
+		case R.id.img_del:
+			if (class_name.equals(AddActivity2.class.getName())) {
+				img_list=new ArrayList<String>();
+				for (int i = 0; i < AddActivity2.tuwenList.size(); i++) {
+					if (!TextUtils.isEmpty(AddActivity2.tuwenList.get(i).getPic())) {
+						img_list.add(AddActivity2.tuwenList.get(i).getPic());
+					}
+				}
+				if (TextUtils.isEmpty(AddActivity2.tuwenList.get(position).getPic())) {
+					delete_dialog(position);
+				}else{
+					if (img_list.size()==1) {
+						Toast.makeText(mcontext, "至少保留一张图片", 0).show();
+					}else{
+						delete_dialog(position);
+					}
+				}
+			} else {
+				try {
+					AddNewsActivity.channel_list.get(position).setFieldcontext(
+							null);
+					finish();
+				} catch (Exception e) {
+					// TODO: handle exception
+					MyNewsDetailActivity.channel_list.get(position)
+							.setFieldcontext(null);
+					finish();
+				}
+			}
+			break;
+		case R.id.img_yes:
+			if (caijian == true) {
+				try {
+					img.setVisibility(View.VISIBLE);
+					cropimage.setVisibility(View.GONE);
+					img_caijian.setVisibility(View.VISIBLE);
+					caijian = false;
+					pic_name = UuidName();
+					bitmaps=cropimage.getCroppedImage();
+					ImageTools.savePhotoToSDCard(
+							bitmaps,
+							OtherFinals.DIR_IMG, pic_name);
+					img_path=OtherFinals.DIR_IMG+pic_name;
+					img.setImageBitmap(bitmaps);
+				} catch (Exception e) {
+					// TODO: handle exception
+					Toast.makeText(mcontext, "裁剪出错", 0).show();
+				}
+				if (class_name.equals(AddActivity2.class.getName())) {
+					AddActivity2.tuwenList.get(position).setPic(img_path);
+				} else if (class_name.equals(AddNewsActivity.class.getName())) {
+					AddNewsActivity.channel_list.get(position).setFieldcontext(img_path);
+				} else if (class_name.equals(MyNewsDetailActivity.class
+						.getName())) {
+					MyNewsDetailActivity.channel_list.get(position).setFieldcontext(img_path);
+				}
+			} else {
+				if (class_name.equals(AddNewsActivity.class.getName())) {
+					AddNewsActivity.channel_list.get(position).setFieldcontext(
+							img_path);
+				}else if(class_name.equals(AddActivity2.class.getName())){
+					AddActivity2.tuwenList.get(position).setPic(img_path);
+				}else if(class_name.equals(MyNewsDetailActivity.class
+						.getName())){
+					MyNewsDetailActivity.channel_list.get(position)
+					.setFieldcontext(img_path);
+				}
+				finish();
+			}
+			break;
+		case R.id.line_back:
+			finish();
+			break;
+		case R.id.img_caijian:
+			caijian = true;
+			cropimage.setVisibility(View.VISIBLE);
+			img.setVisibility(View.GONE);
+			 if(img_path.contains("/News/image/")) {
+				cropimage.setImageBitmap(bitmaps);
+			} else {
+				if (img_path.contains("http")) {
+					bitmap_util.display(cropimage, ""+img_path);
+				}else{
+				bitmap_util.display(cropimage, get_sharePreferences_fuwuqi()
+						+ Contacts.IP + "/" + img_path);
+				}
+			}
+			img_caijian.setVisibility(View.GONE);
+			break;
+		default:
+			break;
+		}
+	}
+
+	private DisplayMetrics dm;
+
+	private String UuidName() {
+		String time = String.valueOf(System.currentTimeMillis());
+		return time + ".jpg";
+	}
+
+	@Override
+	protected void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
+		if (is_delete == true) {
+					if (!TextUtils.isEmpty(img_path)) {
+						 if(img_path.contains("/News/image/")) {
+								bitmaps = BitmapFactory.decodeFile(img_path);
+								img.setImageBitmap(bitmaps);
+							}else{
+								if (img_path.contains("http")) {
+									bitmap_util.display(img, ""+img_path);
+								}else{
+									bitmap_util.display(img, get_sharePreferences_fuwuqi()
+											+ Contacts.IP + "/" + img_path);
+								}
+							}
+					}
+		}
+	}
+
+	// 压缩图片
+	public String compress(String srcPath) {
+		File file = new File(OtherFinals.DIR_IMG);
+		if (!file.exists()) {
+			file.mkdir();
+		}
+		String s = OtherFinals.DIR_IMG
+				+ String.valueOf(System.currentTimeMillis()) + ".jpg";
+		dm = new DisplayMetrics();
+		getWindowManager().getDefaultDisplay().getMetrics(dm);
+		float hh = dm.heightPixels;
+		float ww = dm.widthPixels;
+
+		BitmapFactory.Options opts = new BitmapFactory.Options();
+		opts.inJustDecodeBounds = true;
+		Bitmap bitmap = BitmapFactory.decodeFile(srcPath, opts);
+
+		opts.inJustDecodeBounds = false;
+		int w = opts.outWidth;
+		int h = opts.outHeight;
+		int size = 0;
+		if (w <= ww && h <= hh) {
+			size = 1;
+		} else {
+			double scale = w >= h ? w / ww : h / hh;
+			double log = Math.log(scale) / Math.log(2);
+			double logCeil = Math.ceil(log);
+			size = (int) Math.pow(2, logCeil);
+		}
+		opts.inSampleSize = size;
+		bitmap = BitmapFactory.decodeFile(srcPath, opts);
+
+		ByteArrayOutputStream baos = new ByteArrayOutputStream();
+		int quality = 100;
+		bitmap.compress(Bitmap.CompressFormat.JPEG, quality, baos);
+		System.out.println(baos.toByteArray().length);
+		 int pic_size = Integer.parseInt(get_sharePreferences_pic_width());
+		while (baos.toByteArray().length > pic_size * 1024) {
+			baos.reset();
+			bitmap.compress(Bitmap.CompressFormat.JPEG, quality, baos);
+			quality -= 20;
+			System.out.println(baos.toByteArray().length);
+		}
+		try {
+			baos.writeTo(new FileOutputStream(s));
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				baos.flush();
+				baos.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+		return s;
+	}
+
+	public void delete_dialog(final int position) {
+		// TODO Auto-generated method stub
+		myDialog = new AlertDialog.Builder(mcontext).create();
+		myDialog.show();
+		myDialog.getWindow().setContentView(R.layout.popu_delete);
+		myDialog.getWindow().findViewById(R.id.txt_save_no)
+				.setOnClickListener(new View.OnClickListener() {
+					@Override
+					public void onClick(View v) {
+						myDialog.dismiss();
+					}
+				});
+		myDialog.getWindow().findViewById(R.id.txt_save)
+				.setOnClickListener(new View.OnClickListener() {
+					@Override
+					public void onClick(View v) {
+						AddActivity2.is_delete=true;
+						myDialog.dismiss();
+						finish();
+					}
+				});
+	}
+}

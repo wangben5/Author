@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <com.shadt.ui.widget.NewsRefreshHeadView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+    </android.support.v7.widget.RecyclerView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <indexlib.IndexBar.widget.IndexBar
+        android:id="@+id/indexBar"
+        android:layout_width="24dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        app:indexBarPressBackground="@color/partTranslucent"
+        app:indexBarTextSize="16sp"/>
+
+    <TextView
+        android:id="@+id/tvSideBarHint"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:background="@drawable/shape_side_bar_bg"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="48sp"
+        android:visibility="gone"
+        tools:text="A"
+        tools:visibility="visible"/>
+
+
+    <TextView
+        android:id="@+id/tv_tip"
+        android:gravity="center"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:visibility="invisible"
+        android:text="刷新完成"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_bottom_tip"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:background="@color/colorPrimary"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        />
+    <RelativeLayout
+        android:id="@+id/rela_erro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/img_erro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/no_message" />
+
+        <TextView
+            android:id="@+id/text_erro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_erro"
+            android:layout_centerHorizontal="true"
+            android:text="没有数据"
+            android:textColor="@color/text_hint"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/top_back" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg"
+            android:divider="@color/transparent"
+            android:dividerHeight="0dp"
+            android:scrollbars="none" />
+
+
+        <RelativeLayout
+            android:id="@+id/rela_erro"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_erro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/no_message" />
+
+            <TextView
+                android:id="@+id/text_erro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_erro"
+                android:layout_centerHorizontal="true"
+                android:text="暂无文稿"
+                android:textColor="@color/text_hint"
+                android:textSize="18sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

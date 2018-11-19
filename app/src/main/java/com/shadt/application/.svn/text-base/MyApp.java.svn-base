@@ -1,0 +1,22 @@
+package com.shadt.application;
+
+import android.annotation.SuppressLint;
+import android.annotation.TargetApi;
+import android.app.Application;
+import android.os.Build;
+
+@TargetApi(Build.VERSION_CODES.HONEYCOMB)
+@SuppressLint("NewApi")
+public class MyApp extends Application {
+
+	private boolean isDownload;
+
+	public boolean isDownload() {
+		return isDownload;
+	}
+
+	public void setDownload(boolean isDownload) {
+		this.isDownload = isDownload;
+	}
+
+}

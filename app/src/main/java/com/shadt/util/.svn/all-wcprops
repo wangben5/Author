@@ -1,0 +1,161 @@
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/webproject/!svn/ver/5172/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/util
+END
+Get_Sign.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/webproject/!svn/ver/5171/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/util/Get_Sign.java
+END
+BitmapCache.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/webproject/!svn/ver/5171/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/util/BitmapCache.java
+END
+AlbumHelper.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/webproject/!svn/ver/5171/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/util/AlbumHelper.java
+END
+ImageTools.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/webproject/!svn/ver/5171/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/util/ImageTools.java
+END
+Person.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/webproject/!svn/ver/5171/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/util/Person.java
+END
+ImageLoader.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/webproject/!svn/ver/5172/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/util/ImageLoader.java
+END
+get_parse.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/webproject/!svn/ver/5171/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/util/get_parse.java
+END
+BitmapUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/webproject/!svn/ver/5171/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/util/BitmapUtil.java
+END
+XMLParserUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/webproject/!svn/ver/5171/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/util/XMLParserUtil.java
+END
+CustomDialog2.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/webproject/!svn/ver/5171/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/util/CustomDialog2.java
+END
+xBase64.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/webproject/!svn/ver/5171/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/util/xBase64.java
+END
+Contacts.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/webproject/!svn/ver/5171/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/util/Contacts.java
+END
+OtherFinals.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/webproject/!svn/ver/5171/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/util/OtherFinals.java
+END
+CustomProgressDialog.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/webproject/!svn/ver/5171/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/util/CustomProgressDialog.java
+END
+Html_Save.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/webproject/!svn/ver/5171/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/util/Html_Save.java
+END
+RegularUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/webproject/!svn/ver/5171/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/util/RegularUtils.java
+END
+ConnServer.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/webproject/!svn/ver/5171/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/util/ConnServer.java
+END
+ActivityManagerTool.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/webproject/!svn/ver/5171/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/util/ActivityManagerTool.java
+END
+PasswordTextWatcher.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/webproject/!svn/ver/5171/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/util/PasswordTextWatcher.java
+END
+DomPersonService.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/webproject/!svn/ver/5171/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/util/DomPersonService.java
+END
+Bimp.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/webproject/!svn/ver/5171/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/util/Bimp.java
+END
+ProgressWheel.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/webproject/!svn/ver/5171/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/util/ProgressWheel.java
+END
+RefreshLayout.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/webproject/!svn/ver/5171/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/util/RefreshLayout.java
+END
+LoadingDialog.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/webproject/!svn/ver/5171/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/util/LoadingDialog.java
+END
+BitmapUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/webproject/!svn/ver/5171/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/util/BitmapUtils.java
+END
+WebUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/webproject/!svn/ver/5171/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/util/WebUtils.java
+END

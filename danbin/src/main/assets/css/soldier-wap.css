@@ -1,0 +1,185 @@
+*{margin: 0;padding: 0;}
+ul{list-style: none;}
+body{
+	font-size: 0.12rem;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.g-soldier-box{
+	position: absolute;
+	top:0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+}
+.g-soldier-box .g-operation-box-top{
+	position: relative;
+	margin-top: 0.05rem;
+	width: 100%;
+	height: 0.35rem;
+	line-height: 0.35rem;
+}
+.g-soldier-box .g-operation-box-top .operation-width{
+	width: 0.33rem;
+	height: 0.33rem;
+}
+.g-soldier-box .g-operation-box-top.horizontal .operation-width{
+	width: 0.27rem;
+	height: 0.27rem;
+}
+.g-operation-box-top .operation-width>img{
+	display: inline-block;
+	vertical-align: top;
+	width: 100%;
+	height: 100%;
+}
+.g-soldier-box .g-operation-box-top .m-close-live-box{
+	position: absolute;
+	z-index: 2000;
+	cursor: pointer;
+	left:0.1rem;
+	top:0;
+}
+/*摄像头*/
+.g-soldier-box .g-operation-box-top .m-switchCamera-box{
+	position: absolute;
+	z-index: 2000;
+	cursor: pointer;
+	left:0.55rem;
+	top:0;
+}
+.g-soldier-box .g-operation-box-top.horizontal .m-switchCamera-box{
+	left:0.47rem;
+}
+/*横竖屏*/
+.g-soldier-box .g-operation-box-top .m-changeOrientation-box{
+	position: absolute;
+	z-index: 2000;
+	cursor: pointer;
+	left:1rem;
+	top:0;
+}
+.g-soldier-box .g-operation-box-top.horizontal .m-changeOrientation-box{
+	left:0.84rem;
+}
+/*关闭视图*/
+.g-soldier-box .g-operation-box-top .m-startPreview-box{
+	position: absolute;
+	z-index: 2000;
+	cursor: pointer;
+	left:1.45rem;
+	top:0;
+}
+.g-soldier-box .g-operation-box-top.horizontal .m-startPreview-box{
+	left:1.28rem;
+}
+/*底部操作*/
+.g-operation-box-bottom{
+	position: fixed;
+	width: 100%;
+	height: 0.58rem;
+	line-height: 0.58rem;
+	bottom: 0;
+}
+.g-operation-box-bottom .absolute{
+	position: absolute;
+	z-index: 2000;
+	width: 0.33rem;
+	height: 0.33rem;
+	bottom: 0.2rem;
+}
+.g-operation-box-bottom.horizontal .absolute{
+	width: 0.27rem;
+	height: 0.27rem;
+}
+.g-operation-box-bottom .absolute img{
+	display: inline-block;
+	vertical-align: top;
+	width: 100%;
+	height: 100%;
+}
+.g-operation-box-bottom .m-chatting-box{
+	left:0.25rem;
+}
+/*麦克风*/
+.g-operation-box-bottom .m-micon-box{
+	left:0.65rem;
+}
+.g-operation-box-bottom.horizontal .m-micon-box{
+	/*left:0.62rem;*/
+	left:1rem;
+}
+/*发布直播*/
+.g-operation-box-bottom .m-startpublish-box{
+	width: 0.66rem;
+	height: 0.66rem;
+	position: absolute;
+	left:50%;
+	margin-left: -0.33rem;
+	bottom: 0.15rem;
+}
+.g-operation-box-bottom.horizontal .m-startpublish-box{
+	width: 0.55rem;
+	height: 0.55rem;
+	margin-left: -0.28rem;
+}
+.g-operation-box-bottom .m-startpublish-box img{
+	display: inline-block;
+	vertical-align: top;
+	width: 100%;
+	height: 100%;
+}
+/*美颜*/
+.g-operation-box-bottom .m-beauty-box{
+	right:0.65rem;
+}
+.g-operation-box-bottom.horizontal .m-beauty-box{
+	right:0.62rem;
+}
+/*闪光*/
+.g-operation-box-bottom .m-flashon-box{
+	/*right:0.25rem;*/
+	right:0.65rem;
+}
+.g-operation-box-bottom.horizontal .m-flashon-box{
+	/*right:0.25rem;*/
+	right:1rem;
+}
+/*关闭直播*/
+.g-live-box{
+	display: none;
+	width: 60%;
+	height: 0.8rem;
+	border-radius: 0.08rem;
+	position: absolute;
+	z-index: 4000;
+	top: 50%;
+	left: 50%;
+	margin-left: -30%;
+	margin-top: -0.4rem;
+	font-size: 0.15rem;
+	color: #FFF;
+	background-color: rgba(0,0,0,0.3);
+}
+.g-live-box p{
+	height: 0.4rem;
+    line-height: 0.4rem;
+  	text-align: center;
+  	margin-left: 0.05rem;
+  	margin-right: 0.05rem;
+  	border-bottom: 0.01rem solid #FFF;
+}
+.g-live-box .m-sure-box{
+	height: 0.4rem;
+    line-height: 0.4rem;
+}
+.g-live-box .m-sure-box span{
+	display: inline-block;
+  	width: 50%;
+  	float: left;
+  	text-align: center;
+}
+.g-live-box .m-sure-box span.u-sure{
+	width: 49%;
+	border-left: 0.01rem solid #FFF;
+}

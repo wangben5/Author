@@ -1,0 +1,170 @@
+package com.shadt.activity;
+
+import android.annotation.SuppressLint;
+import android.content.Context;
+import android.util.AttributeSet;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.AbsListView;
+import android.widget.AbsListView.OnScrollListener;
+import android.widget.ListView;
+import android.widget.ProgressBar;
+import android.widget.TextView;
+
+import com.shadt.caibian_news.R;
+import com.shadt.util.RefreshLayout.OnLoadListener;
+
+public class LoadMoreListView extends ListView implements OnScrollListener {
+	private View footer;
+
+	private int totalItem;
+	private int lastItem;
+
+	// 区分当前操作是刷新还是加载
+	public static final int REFRESH = 0;
+	public static final int LOAD = 1;
+
+	private OnLoadMore onLoadMore;
+
+	private LayoutInflater inflater;
+
+	private TextView noData;
+	private TextView loadFull;
+	private TextView more;
+	private ProgressBar loading;
+
+	private boolean loadEnable = true;// 开启或者关闭加载更多功能
+	private boolean isLoadFull;
+	private int pageSize = 10;
+	private boolean isLoading;// 判断是否正在加载
+
+	public LoadMoreListView(Context context) {
+		super(context);
+		init(context);
+	}
+
+	public LoadMoreListView(Context context, AttributeSet attrs) {
+		super(context, attrs);
+		init(context);
+	}
+
+	public LoadMoreListView(Context context, AttributeSet attrs, int defStyle) {
+		super(context, attrs, defStyle);
+		init(context);
+	}
+
+	public boolean isLoadEnable() {
+		return loadEnable;
+	}
+
+	// 这里的开启或者关闭加载更多，并不支持动态调整
+	public void setLoadEnable(boolean loadEnable) {
+		this.loadEnable = loadEnable;
+		this.removeFooterView(footer);
+	}
+
+	public int getPageSize() {
+		return pageSize;
+	}
+
+	public void setPageSize(int pageSize) {
+		this.pageSize = pageSize;
+	}
+
+	@SuppressLint("InflateParams")
+	private void init(Context context) {
+		inflater = LayoutInflater.from(context);
+		footer = inflater.inflate(R.layout.load_more_footer, null, false);
+		loadFull = (TextView) footer.findViewById(R.id.loadFull);
+		noData = (TextView) footer.findViewById(R.id.noData);
+		more = (TextView) footer.findViewById(R.id.more);
+		loading = (ProgressBar) footer.findViewById(R.id.loading);
+		footer.setVisibility(View.GONE);
+		this.addFooterView(footer);
+		this.setOnScrollListener(this);
+	}
+
+	@Override
+	public void onScroll(AbsListView view, int firstVisibleItem,
+			int visibleItemCount, int totalItemCount) {
+		this.lastItem = firstVisibleItem + visibleItemCount;
+		this.totalItem = totalItemCount;
+	}
+
+	@Override
+	public void onScrollStateChanged(AbsListView view, int scrollState) {
+		ifNeedLoad(view, scrollState);
+	}
+
+	// 根据listview滑动的状态判断是否需要加载更多
+	private void ifNeedLoad(AbsListView view, int scrollState) {
+		if (!loadEnable) {
+			return;
+		}
+		try {
+			if (scrollState == OnScrollListener.SCROLL_STATE_IDLE
+					&& !isLoading
+					&& view.getLastVisiblePosition() == view
+							.getPositionForView(footer) && !isLoadFull) {
+				onLoad();
+				isLoading = true;
+			}
+		} catch (Exception e) {
+		}
+	}
+
+	public void setLoadMoreListen(OnLoadMore onLoadMore) {
+		this.onLoadMore = onLoadMore;
+	}
+
+	/**
+	 * 加载完成调用此方法
+	 */
+	public void onLoadComplete() {
+		isLoading = false;
+
+	}
+
+	public interface OnLoadMore {
+		public void loadMore();
+	}
+
+	private OnLoadListener onLoadListener;
+
+	public void onLoad() {
+		if (onLoadListener != null) {
+			onLoadListener.onLoad();
+		}
+	}
+
+	/**
+	 * 这个方法是根据结果的大小来决定footer显示的。
+	 * <p>
+	 * 这里假定每次请求的条数为10。如果请求到了10条。则认为还有数据。如过结果不足10条，则认为数据已经全部加载，这时footer显示已经全部加载
+	 * </p>
+	 * 
+	 * @param resultSize
+	 */
+	public void setResultSize(int resultSize) {
+		if (resultSize == 0) {
+			isLoadFull = true;
+			loadFull.setVisibility(View.GONE);
+			loading.setVisibility(View.GONE);
+			more.setVisibility(View.GONE);
+			noData.setVisibility(View.VISIBLE);
+		} else if (resultSize > 0 && resultSize < pageSize) {
+			isLoadFull = true;
+			loadFull.setVisibility(View.VISIBLE);
+			loading.setVisibility(View.GONE);
+			more.setVisibility(View.GONE);
+			noData.setVisibility(View.GONE);
+		} else if (resultSize == pageSize) {
+			isLoadFull = false;
+			loadFull.setVisibility(View.GONE);
+			loading.setVisibility(View.VISIBLE);
+			more.setVisibility(View.VISIBLE);
+			noData.setVisibility(View.GONE);
+		}
+
+	}
+}

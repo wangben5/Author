@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="navpage">#FFE1E8EB</color>
+
+    <color name="actionsheet_blue">#037BFF</color>
+    <color name="actionsheet_gray">#8F8F8F</color>
+
+    <color name="background_tab_focused">#66CCFF</color>
+    <color name="background_tab_pressed">#CCFFFF</color>
+
+    <color name="color_DimGray">#696969</color>
+    <color name="color_LightPink">#FFB6C1</color>
+    <color name="color_Pink">#FFC0CB</color>
+
+    <color name="rc_text_color_secondary_inverse">@android:color/white</color>
+</resources>

@@ -1,0 +1,149 @@
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/webproject/!svn/ver/5172/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/activity
+END
+ImggridActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/webproject/!svn/ver/5172/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/activity/ImggridActivity.java
+END
+QuanpingActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/webproject/!svn/ver/5171/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/activity/QuanpingActivity.java
+END
+MainActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/webproject/!svn/ver/6721/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/activity/MainActivity.java
+END
+AddNewsActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/webproject/!svn/ver/6798/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/activity/AddNewsActivity.java
+END
+MineNewsActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/webproject/!svn/ver/6642/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/activity/MineNewsActivity.java
+END
+ExamineActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/webproject/!svn/ver/5171/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/activity/ExamineActivity.java
+END
+ImageGridActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/webproject/!svn/ver/5171/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/activity/ImageGridActivity.java
+END
+PhotoActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/webproject/!svn/ver/5171/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/activity/PhotoActivity.java
+END
+Change_pwd_Activity.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/webproject/!svn/ver/5171/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/activity/Change_pwd_Activity.java
+END
+ImagePagerActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/webproject/!svn/ver/5171/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/activity/ImagePagerActivity.java
+END
+ExamineOkDetailActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/svn/webproject/!svn/ver/6408/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/activity/ExamineOkDetailActivity.java
+END
+CaptureActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/webproject/!svn/ver/5171/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/activity/CaptureActivity.java
+END
+MyNewsDetailActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/webproject/!svn/ver/6797/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/activity/MyNewsDetailActivity.java
+END
+LoginActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/webproject/!svn/ver/6721/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/activity/LoginActivity.java
+END
+WebViewActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/webproject/!svn/ver/5171/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/activity/WebViewActivity.java
+END
+ExamineDetailActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/webproject/!svn/ver/6408/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/activity/ExamineDetailActivity.java
+END
+BaseActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/webproject/!svn/ver/6642/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/activity/BaseActivity.java
+END
+AddActivity2.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/webproject/!svn/ver/6783/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/activity/AddActivity2.java
+END
+AboutActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/webproject/!svn/ver/5171/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/activity/AboutActivity.java
+END
+ImageGridActivitytuwen.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/webproject/!svn/ver/5171/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/activity/ImageGridActivitytuwen.java
+END
+PictrueActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/webproject/!svn/ver/5171/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/activity/PictrueActivity.java
+END
+LoadMoreListView.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/webproject/!svn/ver/5171/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/activity/LoadMoreListView.java
+END
+ListImageDirPopupWindow.java
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/svn/webproject/!svn/ver/5172/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/activity/ListImageDirPopupWindow.java
+END
+SettingActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/webproject/!svn/ver/6721/android_shadt_wireless/%E8%AE%B0%E8%80%85%E4%B8%80%E7%BA%BF/news_caiji2/src/com/shadt/activity/SettingActivity.java
+END

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="qianlan">#0c6fba</color>
+	<color name="examine_color">#38465f</color>
+    <color name="sel">#343C49</color>
+    <color name="yellow">#EB6100</color>
+    <color name="layout_bg">#ffA09599</color>
+    <color name="menu_background_checked">#101810</color>
+    <color name="cityframe_background">#fbf8fb</color>
+    <color name="city_foot_line">#D9D9D9</color>
+    <color name="fragment_bgcolor">#F2F1F1</color>
+    <color name="city_text_left">#5E5E5E</color>
+    <color name="city_text_right">#979796</color>
+    <color name="wire_gray">#4E4A4B</color>
+    <color name="text_color">#FF594C53</color>
+    <color name="x_axes">#C3C3C3</color>
+    <color name="ll_details_color">#BFACB5</color>
+    <color name="blue">#1468AF</color>
+    <color name="absolute">#111518</color>
+    <color name="gary">#99000000</color>
+    <color name="translucent">#89ffffff</color>
+    <color name="listblack">#88323232</color>
+    <color name="white">#fff</color>
+    <color name="red">#000061EB</color>
+    <color name="lin_gray">#dcdcdc</color>
+    <color name="bg">#f0eff3</color>
+    <color name="tab_gb">#F3F5F4</color>
+    <!-- //浅灰色字体 -->
+    <color name="text_hint">#b2b2b2</color>
+    <color name="text_black">#000000</color>
+    <color name="text_shengray">#c8c8c8</color>
+    <color name="text_qiangray">#b4b4b4</color>
+    <color name="text_red">#ff0000</color>
+    <color name="text_main">#969696</color>
+
+    <!-- A light Holo shade of blue -->
+    <color name="holo_blue_light">#ff33b5e5</color>
+    <!-- A light Holo shade of green -->
+    <color name="holo_green_light">#ff99cc00</color>
+    <!-- A light Holo shade of red -->
+    <color name="holo_red_light">#ffff4444</color>
+    <!-- A dark Holo shade of blue -->
+    <color name="holo_blue_dark">#ff0099cc</color>
+    <!-- A dark Holo shade of green -->
+    <color name="holo_green_dark">#ff669900</color>
+    <!-- A dark Holo shade of red -->
+    <color name="holo_red_dark">#ffcc0000</color>
+    <!-- A Holo shade of purple -->
+    <color name="holo_purple">#ffaa66cc</color>
+    <!-- A light Holo shade of orange -->
+    <color name="holo_orange_light">#ffffbb33</color>
+    <!-- A dark Holo shade of orange -->
+    <color name="holo_orange_dark">#ffff8800</color>
+    <!-- A really bright Holo shade of blue -->
+    <color name="holo_blue_bright">#ff00ddff</color>
+    <color name="zhibo_txt">#eb6100</color>
+    
+    
+      <color name="activity_bg_color">#fffafafa</color>
+    <color name="top_category_bar_background">#ffeeeeee</color>
+    <color name="divider">#ffdddddd</color>
+    <color name="category_tab_text">#ff707070</color>
+    <color name="category_tab_text_dark">#fffafafa</color>
+    <color name="category_tab_highlight_text">#fffafafa</color>
+    <color name="category_tab_highlight_text_dark">#ffd43d3d</color>
+    <color name="category_tab_highlight_bg">#ffd43d3d</color>
+    <color name="category_tab_highlight_dark_bg">#fffafafa</color>
+	
+    
+    
+    <color name="black">#000000</color>
+    <color name="grey">#58616d</color>
+    <color name="darkgrey">#ff404040</color>
+    <color name="toasterro">#9fd524</color>
+    <color name="lightgrey">#ff888888</color>
+    <color name="semitransparent">#80000000</color>
+    <color name="lightransparent">#a0000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="navpage">#FFE1E8EB</color>
+            <color name="half_color">#30000000</color>
+
+    <color name="partTranslucent">#39000000</color>
+
+
+    <!-- -->
+    <color name="black_textview">#575757</color>
+    <color name="group_list_black_textview">#353535</color>
+    <color name="group_list_gray">#999999</color>
+    <color name="group_list_liner">#e4e4e4</color>
+    <color name="main_title_backgroud">#F2F2F2</color>
+    <color name="main_regist">#ffffff</color>
+    <color name="button_backgroud">#0195ff</color>
+    <color name="de_title_bg">#0195ff</color>
+    <color name="seal_bg">#f0f0f6</color>
+
+    <color name="rc_text_color_secondary_inverse">@android:color/white</color>
+
+    <!--actionbar-->
+    <color name="de_actionbar_bg">#0195ff</color>
+    <!---->
+    <color name="de_action_color">#3498DB</color>
+    <color name="de_action_white">@android:color/white</color>
+    <color name="de_transparent">#00000000</color>
+
+    <color name="de_draft_color">#cb120f</color>
+    <color name="main_theme_color">#0195ff</color>
+
+    <color name="press">#e8e8e8</color>
+
+
+    <color name="text_line_color">#dfdfdd</color>
+    <color name="text_black_color">#333333</color>
+    <color name="text_tips_color">#666666</color>
+    <color name="mine_head_color">#cccccc</color>
+
+
+    <!--SWITCH-->
+    <color name="ksw_md_ripple_normal">#1E000000</color>
+    <color name="ksw_md_solid_shadow">#33000000</color>
+    <color name="ksw_md_solid_normal">#ECECEC</color>
+    <color name="ksw_md_solid_disable">#FFFFFF</color>
+    <color name="ksw_md_solid_checked_disable">#aaaaaa</color>
+
+    <color name="ac_filter_string_color">#0099ff</color>
+    <color name="cs_evaluate_dialog_divider">#eceef3</color>
+    <color name="cs_evaluate_bottom_text_backgroud">#0e8cea</color>
+    <color name="cs_evaluate_text_color">#3c4d65</color>
+    <color name="cs_evaluate_text_border">#B4BDCB</color>
+    <color name="cs_evaluate_text_border_hover">#91BCFF</color>
+    <color name="cs_evaluate_text_selected">#4D8DF0</color>
+    <color name="cs_evaluate_text_unselected">#939DAB</color>
+    <color name="cs_evaluate_background_selected">#E3EEFF</color>
+    <color name="cs_evaluate_edittext_background">#f1f3f5</color>
+    <color name="cs_evaluate_edittext_textcolor">#939dab</color>
+
+    <color name="titleColor">#757575</color>
+    <color name="titleColorSelected">#0065ff</color>
+
+
+    <color name="main_bg">#0c6fba</color>
+
+
+    <color name="bar_grey">#393a3e</color>
+    <color name="color_f6">#f6f6f6</color>
+
+    <color name="color_fa">#fafafa</color>
+
+    <color name="color_c51">#f94c51</color>
+    <color name="color_green">#43c117</color>
+
+    <color name="tab_normal_color">#515051</color>
+
+    <color name="common_pressed">#20000000</color>  <!--白色背景按下去的颜色-->
+
+
+    <color name="pop_bg_content">#F9F9F9</color>
+    <color name="pop_bg_translucent">#01000000</color>
+    <color name="pop_bg_translucent_half">#70000000</color>
+
+    <color name="pop_item_text_normal_color">#007AFF</color>
+    <color name="pop_item_text_warning_color">#FF3B30</color>
+    <color name="pop_item_bg_pressed">#EBEBEB</color>
+
+
+    <color name="pop_action_sheet_title">#4d4d4d</color>
+    <color name="pop_action_sheet_message">#8f8f8f</color>
+
+
+
+    <!-- 画面背景色 -->
+    <drawable name="layout_backgroud">#000000</drawable>
+
+    <!-- 分割线背景色 -->
+    <drawable name="line_background">#161823</drawable>
+
+
+    <!-- 控件按下时显示的颜色 -->
+    <color name="list_backgroud_color">#2fb3cb</color>
+    <color name="title_color">#0f8ec5</color>
+    <color name="content_color">#737373</color>
+
+
+
+</resources>
+
+

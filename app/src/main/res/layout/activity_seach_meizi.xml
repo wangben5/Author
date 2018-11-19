@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:stv="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:background="@color/main_bg">
+
+        <ImageView
+            android:id="@+id/ac_iv_press_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ac_back_icon" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="24dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="12dp"
+            android:background="#0083e0" />
+
+        <EditText
+            android:id="@+id/ac_et_search"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_edit_text_white"
+            android:drawableLeft="@drawable/ac_et_search_icon"
+            android:drawablePadding="8dp"
+            android:drawableRight="@drawable/ac_search_cancel_icon"
+
+            android:hint="搜索关键字"
+            android:imeActionLabel=""
+            android:imeOptions="actionSearch"
+            android:inputType="textNoSuggestions"
+            android:maxLines="1"
+            android:textColor="#ffffff"
+            android:textColorHint="#8ed0ff"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <com.shadt.ui.widget.MyScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.shadt.ui.widget.supertext.SuperTextView
+                android:id="@+id/text_begin_time"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                stv:sLeftTextString="开始时间"
+                stv:sRightIconRes="@drawable/icon_set_enter"
+                stv:sRightTextColor="@color/text_hint"
+                stv:sRightTextSize="12dp"
+                stv:sRightTextString="请选择" />
+
+            <com.shadt.ui.widget.supertext.SuperTextView
+                android:id="@+id/text_finish_time"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                stv:sLeftTextString="结束时间"
+                stv:sRightIconRes="@drawable/icon_set_enter"
+                stv:sRightTextColor="@color/text_hint"
+                stv:sRightTextSize="12dp"
+                stv:sRightTextString="请选择" />
+
+
+            <com.shadt.ui.widget.supertext.SuperTextView
+                android:id="@+id/text_leixin"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                stv:sLeftTextString="类型"
+                stv:sRightIconRes="@drawable/icon_set_enter"
+                stv:sRightTextColor="@color/text_hint"
+                stv:sRightTextSize="12dp"
+                stv:sRightTextString="请选择" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <com.shadt.ui.widget.supertext.SuperTextView
+                    android:id="@+id/text_chongzhi"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="100"
+                    android:gravity="center_horizontal"
+                    stv:sCenterTextString="重置" />
+
+                <TextView
+                    android:layout_width="1dp"
+                    android:layout_height="50dp"
+                    android:background="@color/lin_gray" />
+
+                <com.shadt.ui.widget.supertext.SuperTextView
+                    android:id="@+id/text_search"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="100"
+                    stv:sCenterTextString="搜索" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/mRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <RelativeLayout
+                    android:id="@+id/rela_erro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:id="@+id/img_erro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/no_message" />
+
+                    <TextView
+                        android:id="@+id/text_erro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img_erro"
+                        android:layout_centerHorizontal="true"
+                        android:text="没有数据"
+                        android:textColor="@color/text_hint"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </com.shadt.ui.widget.MyScrollView>
+
+</LinearLayout>

@@ -1,0 +1,43 @@
+<html>  
+	<head>  
+		<script type="text/javascript">
+		function androidcalljs(){
+        <!--var r = alert("I am alert");-->
+       	window.alert("欢迎");
+        }
+		function  js_to_android(img){  
+		  window.android.showpic(img);
+		}
+		function  faceonline(){
+		  window.android.getUserInfo();
+		}
+		</script>  
+	</head>  
+	
+	<body>  
+		<img alt="" src="">
+		<br/>  
+		<div id="content"></div>  
+		<img src="http://pic2.ooopic.com/01/03/51/25b1OOOPIC19.jpg"
+				height="100px" width="100px" alt="1" onclick="jsAlert(img)" />
+
+		<img src="http://pic2.ooopic.com/01/03/51/25b1OOOPIC19.jpg"
+			 height="100px" width="100px" alt="dsadasdas" onclick="faceonline()" />
+
+		<button id="btn">
+			123
+		</button>
+				
+	</body>
+	<script>
+	window.androidcalljs=function(){
+			alert(2);
+		alert(window.android.getIdcardInfo());
+	}
+		var btn = document.getElementById("btn");
+		btn.addEventListener("click",function(){
+				alert(1);
+			window.android.FaceOnline("70")
+		})
+	</script>
+</html>  

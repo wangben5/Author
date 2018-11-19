@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/line_pop"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:background="@color/bg"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/text_all_or_mine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="全部素材" />
+
+            <ImageView
+                android:id="@+id/iv_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_arrow" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1">
+
+            <com.shadt.ui.widget.magicindicator.MagicIndicator
+                android:id="@+id/magic_indicator"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginLeft="5dp" />
+
+            <View
+                android:layout_width="15dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_channel_shade_left" />
+
+            <View
+                android:layout_width="15dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/shape_channel_shade_right" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#e8e8e8" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never" />
+
+        <com.github.clans.fab.FloatingActionMenu
+            android:id="@+id/floating_action_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:padding="15dp"
+            fab:menu_colorNormal="@color/main_bg"
+            fab:menu_labels_ellipsize="end"
+            fab:menu_labels_singleLine="true"><!--   fab:menu_icon="@drawable/actionbar_icon_add" #ccffffff-->
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/menu_item_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_upload_img"
+                fab:fab_colorNormal="@color/main_bg"
+                fab:fab_label="上传图片"
+                fab:fab_size="mini" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/menu_item_video"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_upload_video"
+                fab:fab_colorNormal="@color/main_bg"
+                fab:fab_label="上传视频"
+                fab:fab_size="mini" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/menu_item_audio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_upload_audio"
+                fab:fab_colorNormal="@color/main_bg"
+                fab:fab_label="上传音频"
+                fab:fab_size="mini" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/menu_item_word"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_upload_txt"
+                fab:fab_colorNormal="@color/main_bg"
+                fab:fab_label="上传文稿"
+                fab:fab_size="mini" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/menu_item_down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_upload_down"
+                fab:fab_colorNormal="@color/main_bg"
+                fab:fab_label="下载管理"
+                fab:fab_size="mini" />
+
+
+        </com.github.clans.fab.FloatingActionMenu>
+    </RelativeLayout>
+</LinearLayout>

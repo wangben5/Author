@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:stv="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg"
+        android:orientation="vertical">
+
+        <include layout="@layout/top_back" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <com.shadt.ui.widget.CircleImageView
+                    android:id="@+id/img_head"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center" />
+
+
+                <TextView
+                    android:id="@+id/text_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+
+            <com.shadt.ui.widget.supertext.SuperTextView
+                android:id="@+id/sp_info_text"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                stv:sLeftTextString=" 基本资料"
+                stv:sLeftIconRes="@drawable/img_me_info"
+
+                stv:sRightIconRes="@drawable/icon_set_enter" />
+
+            <com.shadt.ui.widget.supertext.SuperTextView
+                android:id="@+id/sp_change_pas"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                stv:sLeftTextString="密码修改"
+                stv:sLeftIconRes="@drawable/icon_change_pwd"
+                stv:sRightIconRes="@drawable/icon_set_enter" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.shadt.ui.widget.supertext.SuperTextView
+                    android:id="@+id/sp_zuxiao"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="20dp"
+                    stv:sBackgroundDrawableRes="@color/main_bg"
+                     stv:sCenterTextColor="@color/white"
+                    stv:sCenterTextSize="18sp"
+                    stv:sCenterTextString="退出登录" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

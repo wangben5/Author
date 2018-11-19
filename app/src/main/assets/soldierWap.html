@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="renderer" content="webkit">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="description" content="融媒体单兵工具">
+		<meta name="keywords" content="融媒体单兵工具 直播">
+		<title>广电云--融媒体单兵工具</title>
+		<link rel="stylesheet" type="text/css" href="./css/soldier-wap.css"/>
+		<script src="./js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="./js/vue/vue.min.js"></script>
+		<script type="text/javascript" src="./js/vue/vue-resource.min.js"></script>
+		<script type="text/javascript" src="adbridge.js"></script>
+	</head>
+	<body>
+		<div class="g-soldier-box" id="app">
+			<div class="g-operation-box-top" :class="{'horizontal':booleanObj.switchScreen == false}">
+				<div class="m-close-live-box operation-width" v-if="bPublish" @click="popUpFun">
+					<img src="./img/close3.png">
+				</div>
+				<div class="m-switchCamera-box operation-width" @click="switchCamera">
+					<img src="./img/switchcamera4.png"/>
+				</div>
+				<div class="m-changeOrientation-box operation-width" @click="changeOrientation">
+					<img src="./img/changeori2.png" />
+				</div>
+				<div class="m-startPreview-box operation-width" @click="startPreviewFun">
+					<img src="./img/switchcamera.png">
+				</div>
+			</div>
+			<div class="g-operation-box-bottom" :class="{'horizontal':booleanObj.switchScreen == false}">
+				<div class="m-micon-box absolute" @click="enableAudio">
+					<img src="./img/micon4.png" />
+				</div>
+				<div class="m-startpublish-box" v-if="!bPublish" @click="startPublish">
+					<img src="./img/startpublish2.png" />
+				</div>
+				<div class="m-flashon-box absolute" @click="switchFlash">
+					<img src="./img/flashon3.png" />
+				</div>
+			</div>
+			<!-- 确定结束直播 -->
+			<div class="g-live-box" :class="{'horizontal':booleanObj.switchScreen == false}">
+				<p>确定结束直播?</p>
+	            <div class="m-sure-box">
+	                <span class="u-cancel" @click="hideLiveTip">取消</span>
+              		<span class="u-sure" @click="stopPublish">确定</span>
+	          	</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="./js/layer/layer.js"></script>
+		<script>
+			new Vue({
+				el: '#app',
+				data(){
+					return {
+						booleanObj:{
+			      			"isPublishsuc":false,
+			      			"switchScreen":true,//横竖屏
+			      		},
+			      		publishurl:'rtmp://1011.lsspublish.aodianyun.com/demo/game2',
+			      		soldierId:30,
+			      		uin:"1003",
+			      		bPublish:false,
+			      		startPreview:true,
+			      		bFullscreenInfo:{"bFullscreen":1},
+			      		enableAudioInfo:{"bAudioEnable":0},
+			      		timer:null,
+					}
+				},
+				methods: {
+					popUpFun(){
+						$(".g-live-box").slideDown(300);
+					},
+					hideLiveTip(){
+						$(".g-live-box").hide();
+					},
+					stopPublish(){
+			      		var self = this;
+				        self.loadLayer('停止发布');
+				        $(".g-live-box").hide();
+				        dsBridge.call("stopPublish");
+				        //self.$bridge.stopPublish(self.publishurl);
+			      	},
+			      	startPreviewFun(){
+			      		var self = this;
+			      		self.startPreview = !self.startPreview;
+			      		dsBridge.call("startPreview", self.startPreview);
+			      	},
+			      	loadLayer(msg){
+			      		var self = this;
+				        self.closeLayer();
+				        msg = msg ? msg : '加载中……';
+				        layer.load(3, {
+				            content: msg,
+				            time: 0,
+				            shade: false,
+				            success: function(layero){
+				                layero.find('.layui-layer-content').css({
+				                    'padding-top':'30px',
+				                    'background-position':'center top',
+				                    'text-align':'center',
+				                    'width':'auto',
+				                    'white-space': 'nowrap'
+				                });
+				            }
+				        });
+			      	},
+			      	closeLayer(){
+			      		var self = this;
+        				layer.close(layer.index);
+			      	},
+			      	startPublish(){
+			      		var self = this,
+		            		publishurl = self.publishurl;
+		      			dsBridge.call("startPublish",publishurl)
+		  	    		self.loadLayer('正在发布');               
+			      	},
+			      	switchCamera(){
+						dsBridge.call("switchcamera");
+			      	},
+			      	debounce (fn, delay){
+			      		var self = this;
+				        return function () {
+				            var context = this
+				            var args = arguments
+				            clearTimeout(self.timer)
+				            self.timer = setTimeout(function () {
+				              fn.apply(context, args)
+				        	}, delay)
+				        }
+			      	},
+			      	changeOrientation(){
+			      		var self = this;
+			      		self.debounce(function(){
+			      			if(self.booleanObj.switchScreen == true){
+			      				console.log("switchScreen")
+			      				dsBridge.call("changeOrientation", self.bFullscreenInfo, function(){
+						            self.booleanObj.switchScreen = false;
+						            self.bFullscreenInfo.bFullscreen = 0;
+						        });
+			      			}else{
+			      				dsBridge.call("changeOrientation", self.bFullscreenInfo, function(){
+						            self.booleanObj.switchScreen = true;
+						            self.bFullscreenInfo.bFullscreen = 1;
+						        });
+			      			}
+			      		},500)()
+			      	},
+			      	enableAudio(){
+			      		var self = this;
+			      		self.debounce(function(){
+			      			if(self.enableAudioInfo.bAudioEnable == 0){
+			      				dsBridge.call("enableAudio", self.enableAudioInfo, function(){
+						            self.enableAudioInfo.bAudioEnable = 1;
+						        });
+			      			}else{
+			      				dsBridge.call("enableAudio", self.bFullscreenInfo, function(){
+						            self.enableAudioInfo.bAudioEnable = 0;
+						        });
+			      			}
+			      		},500)()
+			      	},
+			      	switchFlash(){
+			      		var self = this;
+			      		self.debounce(function(){
+			      			dsBridge.call("switchflash");
+			      		},500)()
+			      	},
+			      	popTip(){
+		        		this.msgLayer("该功能暂未开发!");
+		      		},
+		      		msgLayer(msg){
+		      			var self = this;
+				        self.closeLayer();
+				        if(typeof(msg) == 'object'){
+				            msg = JSON.stringify(msg);
+				        }
+				        msg = msg ? msg : '提示';
+				        layer.msg(msg, {time: 1000, anim: 0});
+		      		},
+				},
+				mounted(){
+					var self = this;
+				    dsBridge.register('addValue', function (event) {
+				    	console.log(event);
+				    	if (event == 2001) {
+				    		self.bPublish = true;
+				    	}else if (event == 2004){
+				    		self.bPublish = false;
+				    	}
+				    	self.closeLayer();
+				    });
+				    dsBridge.call('setVideoParam',{"videoPreset":3,"fps":30,"bitRate":1500});
+				    self.startPreviewFun();
+				}
+			})
+		</script>
+		<script type="text/javascript">
+			//监听屏幕变化----
+			$(function() {
+				function setFontSize() {
+					// 设计稿 750px
+					var width = document.documentElement.clientWidth;
+					var fontSize = (width / 750) * 100 * 2;
+					document.getElementsByTagName("html")[0].style.fontSize = fontSize + "px";
+				}
+				$(window).on("resize", setFontSize); //监听屏幕变化，变化时触发。
+				setFontSize();
+			})
+		</script>
+	</body>
+
+</html>

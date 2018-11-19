@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/CallKit" />
+            <option value="$PROJECT_DIR$/CallLib" />
+            <option value="$PROJECT_DIR$/IMKit" />
+            <option value="$PROJECT_DIR$/IMLib" />
+            <option value="$PROJECT_DIR$/NodeMediaClient-2.2.4" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/cameresdk" />
+            <option value="$PROJECT_DIR$/cropper" />
+            <option value="$PROJECT_DIR$/danbin" />
+            <option value="$PROJECT_DIR$/mylibrary" />
+            <option value="$PROJECT_DIR$/picture_library" />
+            <option value="$PROJECT_DIR$/silicompressor" />
+            <option value="$PROJECT_DIR$/superweb" />
+            <option value="$PROJECT_DIR$/ucrop" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

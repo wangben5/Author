@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/top_height"
+    android:background="@color/main_bg"
+    android:orientation="horizontal"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:layout_weight="1"
+         android:gravity="center"
+        android:layout_centerInParent="true"
+         android:text="采编一线"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+    <ImageView
+        android:id="@+id/mImgSearch1"
+        android:layout_width="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:src="@drawable/ac_et_search_icon" />
+    <LinearLayout
+        android:id="@+id/search_image_layout"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="10dp"
+        android:visibility="gone"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/layout_logo_title"
+        android:background="@drawable/yuanjian"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp">
+
+        <ImageView
+            android:id="@+id/mImgSearch"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:src="@drawable/newsearch" />
+
+        <TextView
+            android:id="@+id/mEditContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="7dp"
+            android:background="@null"
+            android:hint="搜索"
+            android:imeOptions="actionSearch"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,372 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_login_bg"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg"
+        android:orientation="vertical">
+
+        <include layout="@layout/top_back" />
+        <RelativeLayout
+            android:id="@+id/fenbianlv"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/sel_lin">
+
+            <LinearLayout
+                android:id="@+id/imageView_fenbianlv"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_horizontal"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/icon_fenbianlv" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/imageView_fenbianlv">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="视频通话分辨率"
+                    android:textColor="@color/examine_color"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/text_fenbianlv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="(720P)"
+                    android:textColor="@color/examine_color"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="#e4e4e4" />
+        <RelativeLayout
+            android:id="@+id/about"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:visibility="gone"
+            android:background="@drawable/sel_lin">
+
+            <LinearLayout
+                android:id="@+id/imageView_about"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/icon_fenbianlv" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/imageView_about"
+                android:text="关于"
+                android:textColor="@color/examine_color"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="#e4e4e4" />
+
+        <RelativeLayout
+            android:id="@+id/update"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/sel_lin">
+
+            <LinearLayout
+                android:id="@+id/imageView_update"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/icon_update" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/update_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/imageView_update"
+                android:text="版本更新"
+                android:textColor="@color/examine_color"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="#e4e4e4" />
+
+        <RelativeLayout
+            android:id="@+id/change_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:visibility="gone"
+            android:background="@drawable/sel_lin">
+
+            <LinearLayout
+                android:id="@+id/imageView_change"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/icon_change_pwd" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/imageView_change"
+                android:text="修改密码"
+                android:textColor="@color/examine_color"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="#e4e4e4" />
+
+        <RelativeLayout
+            android:id="@+id/rela_guanlian"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:visibility="gone"
+            android:background="@drawable/sel_lin">
+
+            <LinearLayout
+                android:id="@+id/line_guanlian"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_set_guanlian" />
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/img_switch_guanlian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/img_location_on"/> />
+            <TextView
+                android:id="@+id/text_guanlian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/line_guanlian"
+                android:layout_toLeftOf="@+id/img_switch_guanlian"
+                android:layout_marginRight="10dp"
+                android:text="关联"
+                android:textColor="@color/examine_color"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="#e4e4e4" />
+
+        <RelativeLayout
+            android:id="@+id/exit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:visibility="gone"
+            android:background="@drawable/sel_lin">
+
+            <LinearLayout
+                android:id="@+id/imageView_exit"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/icon_exit" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/imageView_exit"
+                android:text="注销"
+                android:textColor="@color/examine_color"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rela_chutimg"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:visibility="gone"
+
+            android:layout_marginTop="20dp"
+             android:background="@drawable/sel_lin">
+
+            <LinearLayout
+                android:id="@+id/line_location"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/icon_yasuo_img" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/line_location"
+                android:text="图片压缩编辑"
+                android:textColor="@color/examine_color"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img_caijian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:padding="15dp"
+                android:layout_marginRight="20dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/img_location_on"/>
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="#e4e4e4" />
+        <RelativeLayout
+            android:id="@+id/rela_chutvid"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="50dp"
+             android:background="@drawable/sel_lin">
+
+            <LinearLayout
+                android:id="@+id/line_vid"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                 android:layout_marginLeft="20dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_horizontal"
+
+                    android:scaleType="fitXY"
+                    android:src="@drawable/icon_video_yasuo" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/line_vid"
+                android:text="视频压缩"
+                android:textColor="@color/examine_color"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/vid_caijian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:padding="15dp"
+                android:layout_marginRight="20dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/img_location_on"/>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

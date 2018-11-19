@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/top_back"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/top_height"
+    android:background="@color/main_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:id="@+id/line_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                 android:padding="15dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_back" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+            <ImageView 
+                android:id="@+id/img_xiala"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:paddingTop="15dp"
+                android:visibility="gone"
+                android:paddingBottom="15dp"
+                android:src="@drawable/icon_xiala"
+                />
+        </LinearLayout>
+        <TextView 
+            android:id="@+id/txt_changge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/white"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:layout_marginRight="10dp"
+            android:visibility="gone"
+            android:textSize="18sp"
+            android:text="更改"
+            />
+    </RelativeLayout>
+</LinearLayout>
